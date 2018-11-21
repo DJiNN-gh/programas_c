@@ -9,24 +9,24 @@ int detector (float array_f[], int tamVet, int num);
 
 int main (void){
 
-	int tamVetA_f, i;
+	int tamVetA_i, i;
 	float ocrValor;
 	// float *vetorA_f;
 	
 	printf("Insira o tamanho do vetor: \n");
-	scanf("%d", &tamVetA_f);
+	scanf("%d", &tamVetA_i);
 
-	float * vetorA_f = malloc(tamVetA_f * sizeof(float));
+	float * vetorA_f = malloc(tamVetA_i * sizeof(float));
 
 	printf("Insira o valor a ser buscado: \n");
 	scanf("%f", &ocrValor);
 
-	for(i=0;i<tamVetA_f;i++){
+	for(i=0;i<tamVetA_i;i++){
 
 		printf("Insira os valores do vetor: \n");
 		scanf("%f", &vetorA_f[i]);}
 
-	printf("O numero de ocorrencias foi: %d\n", detector(vetorA_f, tamVetA_f, ocrValor));
+	printf("O numero de ocorrencias foi: %d\n", detector(vetorA_f, tamVetA_i, ocrValor));
 
 return 0;}
 
