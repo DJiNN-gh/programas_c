@@ -32,7 +32,7 @@ return 0;}
 
 int detector (float array_f[], int tamVet, int num){
 
-	int cont, i;
+	int cont=0, i;
 	
 	for(i=0;i<tamVet;i++){
 
