@@ -30,7 +30,7 @@ void trocador (float array_f[], int tamVet){
 
 	int i, j, aux;
 
-	for(i=0, j=1;i<tamVet;i+=2, j+=2){
+	for(i=0, j=1;j<tamVet;i+=2, j+=2){
 
 		aux=array_f[j];
 		array_f[j]=array_f[i];

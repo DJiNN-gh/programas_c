@@ -4,7 +4,7 @@ Pede-se a implementação de uma função que, dado um vetor contendo núme
 #include <stdio.h>
 #include <stdlib.h>
 
-bool checador (float array_f[], int tamVet_i);
+int checador (float array_f[], int tamVet_i);
 
 int main (void){
 
@@ -29,10 +29,10 @@ int main (void){
 
 return 0;}
 
-bool checador (float array_f[], int tamVet_i){
-	int i,j;
+int checador (float array_f[], int tamVet_i){
+	int i, j;
 
-	for (i=0,j=1; i<tamvet_i; i++, j++){
+	for (i=0, j=1;j<tamvet_i;i++, j++){
 		
 		if (array_f[i] > array_f[j]){
 		return 0;}}

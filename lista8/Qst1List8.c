@@ -5,7 +5,7 @@ vetor A. */
 #include <stdio.h>
 #include <stdlib.h>
 
-int detector (float array_f[], int tamVet, int num);
+int detector (int array_f[], int tamVet, int num);
 
 int main (void){
 
@@ -16,7 +16,7 @@ int main (void){
 	printf("Insira o tamanho do vetor: \n");
 	scanf("%d", &tamVetA_i);
 
-	float * vetorA_f = malloc(tamVetA_i * sizeof(float));
+	float * vetorA_i = malloc(tamVetA_i * sizeof(float));
 
 	printf("Insira o valor a ser buscado: \n");
 	scanf("%f", &ocrValor);
@@ -24,13 +24,13 @@ int main (void){
 	for(i=0;i<tamVetA_i;i++){
 
 		printf("Insira os valores do vetor: \n");
-		scanf("%f", &vetorA_f[i]);}
+		scanf("%f", &vetorA_i[i]);}
 
-	printf("O numero de ocorrencias foi: %d\n", detector(vetorA_f, tamVetA_i, ocrValor));
+	printf("O numero de ocorrencias foi: %d\n", detector(vetorA_i, tamVetA_i, ocrValor));
 
 return 0;}
 
-int detector (float array_f[], int tamVet, int num){
+int detector (int array_f[], int tamVet, int num){
 
 	int cont=0, i;
 	
