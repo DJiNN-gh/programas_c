@@ -8,21 +8,20 @@ Nota: observem que a diferença entre o 1o e 2o elementos é igual a 1, entre 
 
 #define TAM_VET 50
 
-void armazenador ();
+void armazenador (int array_i[], int tam_i);
 
 int main (void){
 
 
 return 0;}
 
-void armazenador (){
+void armazenador (int array_i[], int tam_i){
 
-	int j=1;
-	int array_i[TAM_VET];
+	unsigned int j=1;
 
 	array_i[0]=1;
 
-	for(;j<TAM_VET;j++){
+	for(;j<tam_i;j++){
 
 		array_i[j]=array_i[j-1]+j;}}
 

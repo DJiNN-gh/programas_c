@@ -7,11 +7,11 @@ conforme forem pares ou ímpares. */
 
 #define TAM_VET 300
 
-void distribuidor (int array_i[], int tam, int arrayPar_i[], int arrayImpar_i[], int *j, int *k);
+void distribuidor (int array_i[], int tam_i, int arrayPar_i[], int arrayImpar_i[], int *j, int *k);
 
 int main (void){
 
-	int i=0, contPar, contImpar;
+	unsigned int i=0, contPar, contImpar;
 	int vetA_i[TAM_VET];
 	int vetPar_i[TAM_VET];
 	int vetImpar_i[TAM_VET];
@@ -31,11 +31,11 @@ int main (void){
 	 
 return 0;}
 
-void distribuidor (int array_i[], int tam, int arrayPar_i[], int arrayImpar_i[], int *j, int *k){
+void distribuidor (int array_i[], int tam_i, int arrayPar_i[], int arrayImpar_i[], int *j, int *k){
 
-	int i=0;
+	unsigned int i=0;
 
-	for (;i<TAM_VET;i++){
+	for (;i<tam_i;i++){
 	
 		if (array_i[i] % 2 == 0){
 
