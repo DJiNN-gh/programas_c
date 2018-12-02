@@ -23,7 +23,7 @@ imprimir:
 	if (i < 3){
 		goto imprimir;}
 
-	// O i e impresso atraves de uma repeticao em loop, com uso de um label e um condicional
+	// O i e impresso atraves de uma repeticao em loop, com uso de um label e uma condicional
 
 	printf("\n");
 
@@ -31,7 +31,7 @@ imprimir:
 	
 		printf("O valor de i e: %u\n", i);}
 		
-	// O i e impresso atraves de uma repeticao em loop, com uso da estrutura for
+	// O i e impresso atraves de uma repeticao em loop, com uso da estrutura FOR
 		
 	printf("\n");
 
@@ -45,9 +45,38 @@ imprimir:
 	else{
 		continue;}
 	
-	// O i e impresso atraves de uma repeticao em loop, com o uso da estrutura for sem seus parametros. Sao usados o pos-incremento, o break e o continue para estabelecer os parametros
+	// O i e impresso atraves de uma repeticao em loop, com o uso da estrutura FOR sem seus parametros. Sao usados o pos-incremento, o break e o continue para estabelecer os parametros
 
 	printf("\n");
 
-	while (i < 2)
+	i=0;
+
+	while (i < 3){
+		printf("O valor de i e: %u\n", i++);}
+
+	// O i e impresso atraves de uma repeticao em loop, com o uso da estrutura WHILE
+	
+	printf("\n");
+
+	i=0;
+
+	do{
+		printf("O valor de i e: %u\n", i++);}
+	while (i < 3);
+	
+	// O i e impresso atraves de uma repeticao em loop, com o uso da estrutura DO... WHILE
+
+	printf("\n");
+
+	i=0;
+
+	while(true){
+		
+		printf("O valor de i e: %u\n", i);
+	if (i > 2){
+		break;}
+	i++;}
+
+	// O i e impresso atraves de uma repeticao em loop, com o uso da estrutura WHILE e uma condicional para limitar sua execucao.
+
 return 0;}

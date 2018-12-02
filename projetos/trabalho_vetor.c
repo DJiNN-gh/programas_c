@@ -11,155 +11,174 @@ valor -1 se não for encontrado;
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
-void chamador ();	// Funcao que exibe menu
-void insersor (int array_i[], int valorInserir_i, int *contagem_i);	// Funcao que insere um valor em na ultima posicao livre do vetor
-void removedor_Ocorrencia (int array_i[], int tam_i, int valorRemover_i, int *contagem_i);	// Funcao que remove um determinado valor do vetor
-void removedor_Posicao (int array_i[], int valorRemover_i, int *contagem_i);	// Funcao que remove o valor de uma determinada posicao do vetor
-void alterador (int array_i[], int tam_i, int valorAlterado_i, int valorAlterar_i, int *contagem_i);	// Funcao que altera um determinado valor por outro
-int buscador (int array_i[], int tam_i, int valorBuscar_i, int *contagem);	// Funcao que busca um determinado valor no vetor
-void mostrador (int array_i[], int *contagem_i);	// Funcao que exibe os valores contidos no vetor
+#define TAM_VET 10
+
+void chamador (unsigned int *contagem_ui);	// Funcao que exibe menu
+int insersor (int array_i[], int valorInserir_i, unsigned int *contagem_ui);	// Funcao que insere um valor em na ultima posicao livre do vetor
+void removedor_Ocorrencia (int array_i[], int valorRemover_i, unsigned int *contagem_ui);	// Funcao que remove um determinado valor do vetor
+int removedor_Posicao (int array_i[], int valorRemover_i, unsigned int *contagem_ui);	// Funcao que remove o valor de uma determinada posicao do vetor
+int alterador (int array_i[], int valorAlterado_i, int valorAlterador_i, unsigned int *contagem_ui);	// Funcao que altera um determinado valor por outro
+int buscador (int array_i[], int valorBuscar_i, unsigned int *contagem_ui);	// Funcao que busca um determinado valor no vetor
+void mostrador (int array_i[], unsigned int *contagem_ui);	// Funcao que exibe os valores contidos no vetor
+void limpador (int array_i[]);	// Funcao que limpa o vetor (zera todas as suas posicoes)
 
 int main (void){
 
+	char opcao_c;
+	int valor_i, valorEntrada_i, valorSaida_i;
+	unsigned int contagem_ui=0;
+	int lista_i[TAM_VET];	// Aqui entraria malloc para definir um tamanho para o vetor dinamicamente, mas infelizmente nao podemos utilizar 
+
 	printf("Bem vindo(a).\n");
 
-	chamador();
+	limpador(lista_i);
 
 	do{
-		fflush (stdin);	scanf("%c", &opcao);	opcao=toupper(opcao);
-		switch (opcao){
+
+	chamador(&contagem_ui);
+		
+		fflush(stdin);	scanf("%c", &opcao_c);	opcao_c=toupper(opcao_c);
+
+		switch (opcao_c){
 
 			case 'I':
 				printf("Qual valor deseja inserir? \n");
-				scanf("%d", &valor);
-				insersor(lista, valor, &contagem);
-				chamador();
+				scanf("%d", &valor_i);
+				insersor(lista_i, valor_i, &contagem_ui);
 				break;
 
 			case 'O':
 				printf("Qual valor deseja remover? \n");
-				scanf("%d", &valor);
-				removedor_Ocorrencia(lista, tam_vet, valor, &contagem);	// Definir tamanho do vetor!
-				chamador();
+				scanf("%d", &valor_i);
+				removedor_Ocorrencia(lista_i, valor_i, &contagem_ui);
 				break;
 
 			case 'P':
 				printf("Qual posicao deseja remover? \n");
-				scanf("%d", &valor);
-				removedor_Posicao(lista, valor, &contagem);
-				chamador();
+				scanf("%d", &valor_i);
+				removedor_Posicao(lista_i, valor_i, &contagem_ui);
 				break;
 
 			case 'A':
 				printf("Qual valor a ser alterado? \n");
-				scanf("%d", &valor);
-				printf("Qual o novo valor?\n");
-				scanf("%d", &valorAux);
-				alterador(lista, tam_vet, valor, valorAux, &contagem);
-				chamador();
+				scanf("%d", &valorEntrada_i);
+				printf("Qual o novo valor? \n");
+				scanf("%d", &valorSaida_i);
+				alterador(lista_i, valorEntrada_i, valorSaida_i, &contagem_ui);
 				break;
 
 			case 'B':
 				printf("Qual valor a ser buscado? \n");
-				scanf("%d", &valor);
-				buscador(lista, tam_vet, valor, &contagem);
-				
-				chamador();
+				scanf("%d", &valor_i);
+				printf("Seu valor esta na posicao: %d\n", buscador(lista_i, valor_i, &contagem_ui));
 				break;
 
 			case 'L':
-				mostrador(lista, &contagem);
-				chamador();
-				break;
-
-			case 'S':
-
-				chamador();
+				mostrador(lista_i, &contagem_ui);
 				break;
 
 			default:
 				printf("Opcao invalida. Escolha uma das opcoes informadas\n");
-				chamador();
 				break;}
 
-	} while (opcao != 'S');
+	} while (opcao_c != 'S');
 
+printf("Encerrando... Tenha um bom dia!\n\n");
 return 0;}
 
 // Funcao Chama Menu
-void chamador (){
+void chamador (unsigned int *contagem_ui){
 
-	printf("\t\tMENU\n\nEscolha uma das opcoes abaixo\n");
-	printf("[I] Inserir\n");
+	printf("\t\t--MENU--\n\nEscolha uma das opcoes abaixo\n");
+	
+	if (*contagem_ui < TAM_VET){
+		printf("[I] Inserir\n");}
 	printf("[O] Deletar ocorrencia\n");
 	printf("[P] Deletar posicao\n");
 	printf("[A] Alterar\n");
 	printf("[B] Buscar\n");
 	printf("[L] Listar\n");
 	printf("[S] Sair\n\n");
-	printf("Opcao: \n");}
+	printf("Sua opcao: \n");}
 
 // Funcao Insere
-void insersor (int array_i[], int valorInserir_i, int *contagem_i){	// Contador da posicao da lista
+int insersor (int array_i[], int valorInserir_i, unsigned int *contagem_ui){	// Contador da posicao da lista
 
-	array_i[*contagem_i]=valorInserir_i;
-	&contagem_i++;}
+	unsigned int i=0;
 
+	for (;i<*contagem_ui;i++){
+
+		if(valorInserir_i == array_i[i]){
+			printf("Valor ja existente!\n");
+			return 0;}}
+
+	array_i[*contagem_ui]=valorInserir_i;
+	*contagem_ui+=1;}
 
 // Funcao Remove Ocorrencia
-void removedor_Ocorrencia (int array_i[], int tam_i, int valorRemover_i, int *contagem_i){
+void removedor_Ocorrencia (int array_i[], int valorRemover_i, unsigned int *contagem_ui){
 
-	int i=0;
+	unsigned int i=0;
 
-	for (;i<tam_i;i++){
+	for (;i<*contagem_ui;i++){
 
 		if (array_i[i] == valorRemover_i){
 
-			array_i[i]=array_i[*contagem_i];}
-			*contagem_i--;}}
+			array_i[i]=array_i[*contagem_ui];}
+			array_i[*contagem_ui]=0;
+			*contagem_ui-=1;}}
 
 // Funcao Remove Posicao
-void removedor_Posicao (int array_i[], int valorRemover_i, int *contagem_i){
+int removedor_Posicao (int array_i[], int valorRemover_i, unsigned int *contagem_ui){
 
-	array_i[valorRemover_i]=array_i[*contagem_i];
-	*contagem--;}
+	if (valorRemover_i > *contagem_ui){
+		return 0;}
+	else{
+		array_i[valorRemover_i]=array_i[*contagem_ui];
+		array_i[*contagem_ui]=0;
+		*contagem_ui-=1;}}
 
 // Funcao Altera
-void alterador (int array_i[], int tam_i, int valorAlterado_i, int valorAlterar_i, int *contagem_i){
+int alterador (int array_i[], int valorAlterado_i, int valorAlterador_i, unsigned int *contagem_ui){
 
-	int i=0;
+	unsigned int i=0;
 
-	for (;i<tam_i;i++){
+	for (;i<*contagem_ui;i++){
 
+		if (array_i[i] == valorAlterador_i){
+			return 0;}
+		// else?
 		if (array_i[i] == valorAlterado_i){
 
-			array_i[i]=array_i[*contagem_i];
-			*contagem_i--;}}
-		else{
-			printf("Valor nao encontrado\n");}}
+			array_i[i]=valorAlterador_i;}}}
 
 // Funcao Busca
-int buscador (int array_i[], int tam_i, int valorBuscar_i, int *contagem_i){
+int buscador (int array_i[], int valorBuscar_i, unsigned int *contagem_ui){
 
-	int i=0;
+	unsigned int i=0;
 
-	for (;i<tam_i;i++){
+	for (;i<=*contagem_ui;i++){
 
 		if (array_i[i] == valorBuscar_i){
 
-			return ;}}
-		else{
-			return -1;}}
+			return i;}}
+	return -1;}
 
 // Funcao Lista
-void mostrador (int array_i[], int *contagem_i){
+void mostrador (int array_i[], unsigned int *contagem_ui){
 
-	int i=0;
+	unsigned int i=0;
 
-	for (;i<=*contagem_i;i++){
+	for (;i<=*contagem_ui;i++){
 
 		printf("Valor da posicao %d: %d\n", ++i, array_i[i]);}}
 
+// Funcao Limpa
+void limpador (int array_i[]){
 
-// Funcao Termina
+	unsigned int i=0;
+
+	for (;i<TAM_VET;i++){
+		array_i[i]=0;}}
