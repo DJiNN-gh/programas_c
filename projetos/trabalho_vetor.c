@@ -19,7 +19,7 @@ void chamador (unsigned int *contagem_ui);	// Funcao que exibe menu
 int insersor (int array_i[], int valorInserir_i, unsigned int *contagem_ui);	// Funcao que insere um valor em na ultima posicao livre do vetor
 void removedor_Ocorrencia (int array_i[], int valorRemover_i, unsigned int *contagem_ui);	// Funcao que remove um determinado valor do vetor
 int removedor_Posicao (int array_i[], int valorRemover_i, unsigned int *contagem_ui);	// Funcao que remove o valor de uma determinada posicao do vetor
-int alterador (int array_i[], int valorAlterado_i, int valorAlterador_i, unsigned int *contagem_ui);	// Funcao que altera um determinado valor por outro
+int alterador (int array_i[], int entrada_i, int saida_i, unsigned int *contagem_ui);	// Funcao que altera um determinado valor por outro
 int buscador (int array_i[], int valorBuscar_i, unsigned int *contagem_ui);	// Funcao que busca um determinado valor no vetor
 void mostrador (int array_i[], unsigned int *contagem_ui);	// Funcao que exibe os valores contidos no vetor
 void limpador (int array_i[]);	// Funcao que limpa o vetor (zera todas as suas posicoes)
@@ -27,7 +27,7 @@ void limpador (int array_i[]);	// Funcao que limpa o vetor (zera todas as suas p
 int main (void){
 
 	char opcao_c;
-	int valor_i, valorEntrada_i, valorSaida_i;
+	int valor_i, valorAntigo_i, valorNovo_i;
 	unsigned int contagem_ui=0;
 	int lista_i[TAM_VET];	// Aqui entraria malloc para definir um tamanho para o vetor dinamicamente, mas infelizmente nao podemos utilizar ¯\_(ツ)_/¯ 
 
@@ -63,10 +63,10 @@ int main (void){
 
 			case 'A':
 				printf("Qual valor a ser alterado? \n");
-				scanf("%d", &valorEntrada_i);
+				scanf("%d", &valorAntigo_i);
 				printf("Qual o novo valor? \n");
-				scanf("%d", &valorSaida_i);
-				alterador(lista_i, valorEntrada_i, valorSaida_i, &contagem_ui);
+				scanf("%d", &valorNovo_i);
+				alterador(lista_i, valorAntigo_i, valorNovo_i, &contagem_ui);
 				break;
 
 			case 'B':
@@ -145,18 +145,18 @@ int removedor_Posicao (int array_i[], int valorRemover_i, unsigned int *contagem
 return 1;}
 
 // Funcao Altera
-int alterador (int array_i[], int valorAlterado_i, int valorAlterador_i, unsigned int *contagem_ui){
+int alterador (int array_i[], int entrada_i, int saida_i, unsigned int *contagem_ui){
 
 	unsigned int i=0;
 
 	for (;i<*contagem_ui;i++){
 
-		if (array_i[i] == valorAlterador_i){
+		if (array_i[i] == saida_i){
 			return 0;}
 
-		if (array_i[i] == valorAlterado_i){
+		if (array_i[i] == entrada_i){
 
-			array_i[i]=valorAlterador_i;}}
+			array_i[i]=saida_i;}}
 
 return 1;}
 
