@@ -29,7 +29,7 @@ int main (void){
 	char opcao_c;
 	int valor_i, valorEntrada_i, valorSaida_i;
 	unsigned int contagem_ui=0;
-	int lista_i[TAM_VET];	// Aqui entraria malloc para definir um tamanho para o vetor dinamicamente, mas infelizmente nao podemos utilizar 
+	int lista_i[TAM_VET];	// Aqui entraria malloc para definir um tamanho para o vetor dinamicamente, mas infelizmente nao podemos utilizar ¯\_(ツ)_/¯ 
 
 	printf("Bem vindo(a).\n");
 
@@ -115,7 +115,9 @@ int insersor (int array_i[], int valorInserir_i, unsigned int *contagem_ui){	// 
 			return 0;}}
 
 	array_i[*contagem_ui]=valorInserir_i;
-	*contagem_ui+=1;}
+	*contagem_ui+=1;
+
+return 1;}
 
 // Funcao Remove Ocorrencia
 void removedor_Ocorrencia (int array_i[], int valorRemover_i, unsigned int *contagem_ui){
@@ -133,12 +135,14 @@ void removedor_Ocorrencia (int array_i[], int valorRemover_i, unsigned int *cont
 // Funcao Remove Posicao
 int removedor_Posicao (int array_i[], int valorRemover_i, unsigned int *contagem_ui){
 
-	if (valorRemover_i > *contagem_ui){
+	if (valorRemover_i >= *contagem_ui){
 		return 0;}
 	else{
 		array_i[valorRemover_i]=array_i[*contagem_ui];
 		array_i[*contagem_ui]=0;
-		*contagem_ui-=1;}}
+		*contagem_ui-=1;}
+
+return 1;}
 
 // Funcao Altera
 int alterador (int array_i[], int valorAlterado_i, int valorAlterador_i, unsigned int *contagem_ui){
@@ -149,10 +153,12 @@ int alterador (int array_i[], int valorAlterado_i, int valorAlterador_i, unsigne
 
 		if (array_i[i] == valorAlterador_i){
 			return 0;}
-		// else?
+
 		if (array_i[i] == valorAlterado_i){
 
-			array_i[i]=valorAlterador_i;}}}
+			array_i[i]=valorAlterador_i;}}
+
+return 1;}
 
 // Funcao Busca
 int buscador (int array_i[], int valorBuscar_i, unsigned int *contagem_ui){
@@ -164,7 +170,8 @@ int buscador (int array_i[], int valorBuscar_i, unsigned int *contagem_ui){
 		if (array_i[i] == valorBuscar_i){
 
 			return i;}}
-	return -1;}
+
+return -1;}
 
 // Funcao Lista
 void mostrador (int array_i[], unsigned int *contagem_ui){
@@ -173,7 +180,7 @@ void mostrador (int array_i[], unsigned int *contagem_ui){
 
 	for (;i<=*contagem_ui;i++){
 
-		printf("Valor da posicao %d: %d\n", ++i, array_i[i]);}}
+		printf("Valor da posicao %d: %d\n", i+1, array_i[i]);}}
 
 // Funcao Limpa
 void limpador (int array_i[]){
