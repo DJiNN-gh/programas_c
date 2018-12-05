@@ -128,9 +128,9 @@ void removedor_Ocorrencia (int array_i[], int valorRemover_i, unsigned int *cont
 
 		if (array_i[i] == valorRemover_i){
 
-			array_i[i]= array_i[*contagem_ui];}
+			array_i[i]= array_i[*contagem_ui-1];
 			array_i[*contagem_ui]=0;
-			*contagem_ui-=1;}}
+			*contagem_ui-=1;}}}
 
 // Funcao Remove Posicao
 int removedor_Posicao (int array_i[], int valorRemover_i, unsigned int *contagem_ui){
