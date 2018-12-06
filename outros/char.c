@@ -21,4 +21,14 @@ int main (void){
 
 	printf("Valor de C: %d\n", unsg_c);
 
-	return 0;}
+	printf("\t--Tabela ASCII--\n");
+	
+	unsg_c = 0xa;
+
+	printf("%c\t", unsg_c);
+/*
+	for (unsg_c=0;unsg_c<=0xFF;c++){
+
+		printf("%c\t", c);}
+*/
+return 0;}
