@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void transpositor (int matrixA_i[][], int matrixB_i[][], unsigned int sizeLinha_ui, unsigned int sizeColuna_ui);
+void transpositor (float matrixA_i[][], float matrixB_i[][], unsigned int sizeLinha_ui, unsigned int sizeColuna_ui);
 
 int main (void){
 
@@ -11,7 +11,7 @@ int main (void){
 return 0;}
 
 // Funcao que realiza a transposicao de uma matriz
-void transpositor (int matrixA_i[][], int matrixB_i[][], unsigned int sizeLinha_ui, unsigned int sizeColuna_ui){
+void transpositor (float matrixA_i[][], float matrixB_i[][], unsigned int sizeLinha_ui, unsigned int sizeColuna_ui){
 
 	unsigned int i, j, k, l;
 

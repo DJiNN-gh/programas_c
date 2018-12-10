@@ -1,13 +1,10 @@
-/* Pede-se o desenvolvimento de um programa que, atrave´s de um menu, permita ao usua´rio realizar as seguintes operac¸o~es sobre o vetor:
-1) Inserc¸a~o de um novo nu´mero;
-2) Remoc¸a~o de determinado valor;
-3) Remoc¸a~o do elemento que encontra-se
-em uma dada posic¸a~o;
-4) Alterac¸a~o de um valor por outro;
-5) Busca de determinado nu´mero, retornando
-a sua posic¸a~o (caso exista no vetor) ou o
-valor -1 se na~o for encontrado;
-6) Exibic¸a~o de todos os elementos do vetor. */
+/* Pede-se o desenvolvimento de um programa que, através de um menu, permita ao usuário realizar as seguintes operações sobre o vetor:
+1) Inserção de um novo número;
+2) Remoção de determinado valor;
+3) Remoção do elemento que encontra-se em uma dada posição;
+4) Alteração de um valor por outro;
+5) Busca de determinado número, retornando a sua posição (caso exista no vetor) ou o valor -1 se não for encontrado;
+6) Exibição de todos os elementos do vetor. */
 
 #include <stdio.h>
 #include <stdlib.h>
