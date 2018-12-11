@@ -130,7 +130,7 @@ int insersor (int array_i[], int valorInserir_i, unsigned int *contador_ui){
 				array_i[*contador_ui]=array_i[*contador_ui-1];}
 				
 			array_i[i]=valorInserir_i;
-			*contador_ui+1;
+			*contador_ui+=1;
 			return 1;}}}
 
 // Funcao Remove Ocorrencia
@@ -140,7 +140,7 @@ int removedor_Ocorrencia (int array_i[], int valorRemover_i, unsigned int *conta
 
 	if (valorRemover_i == array_i[*contador_ui-1]){
 
-		*contador_ui-1;
+		*contador_ui-=1;
 		return 1;}
 
 	while (valorRemover_i != array_i[i]){
@@ -156,7 +156,7 @@ int removedor_Ocorrencia (int array_i[], int valorRemover_i, unsigned int *conta
 		for (;i<*contador_ui;i++){
 
 			array_i[i]=array_i[i+1];}
-		*contador_ui-1;
+		*contador_ui-=1;
 return 1;}
 
 // Funcao Remove Posicao
@@ -172,7 +172,7 @@ int removedor_Posicao (int array_i[], int valorRemover_i, unsigned int *contador
 
 		array_i[i]=array_i[i+1];}
 	
-	contador_ui-1;
+	contador_ui-=1;
 
 return 1;}
 
