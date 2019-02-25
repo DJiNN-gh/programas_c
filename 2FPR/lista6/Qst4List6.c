@@ -23,6 +23,6 @@ int verificador (int matrix_i[TAM_MATRIX][TAM_MATRIX]){
 
 			if (matrix_i[i][j] != matrix_i[j][i]){
 
-				return 1;}}}
+				return 0;}}}
 
-return 0;}
+return 1;}
