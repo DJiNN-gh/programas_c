@@ -11,6 +11,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define TAM_MATRIX 5
+
 void gerador (void);
 
 int main (void){
