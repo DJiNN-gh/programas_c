@@ -29,5 +29,5 @@ void gerador (int matrix_i [5][5]){
 
 		for (j=0;j<TAM_MATRIX;){
 
-			matrix_i[i][j]=i+k;}}}
+			matrix_i[i][j]=j+k;}}}
 
