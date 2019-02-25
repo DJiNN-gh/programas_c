@@ -8,7 +8,7 @@ int verificador (int matrix_i[][], unsigned int sizeLinha_ui, unsigned int sizeC
 int main (void){
 
 
-return 0;
+return 0;}
 
 // Funcao que determina se uma dada matriz e simetrica
 int verificador (int matrix_i[][], unsigned int sizeLinha_ui, unsigned int sizeColuna_ui){
@@ -19,8 +19,8 @@ int verificador (int matrix_i[][], unsigned int sizeLinha_ui, unsigned int sizeC
 
 		for(j=0;j<sizeLinha_ui;j++){
 
-			if (matrix_i[i][j] != matrix_i[j][i])
+			if (matrix_i[i][j] != matrix_i[j][i]){
 
-				return 0;}}
+				return 1;}}}
 
-return 1;}
+return 0;}
