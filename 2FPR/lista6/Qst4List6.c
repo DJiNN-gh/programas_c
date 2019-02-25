@@ -3,7 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int verificador (int matrix_i[][], unsigned int sizeLinha_ui, unsigned int sizeColuna_ui);
+#define TAM_MATRIX 5 
+
+int verificador (int matrix_i[TAM_MATRIX][TAM_MATRIX]);
 
 int main (void){
 
@@ -11,7 +13,7 @@ int main (void){
 return 0;}
 
 // Funcao que determina se uma dada matriz e simetrica
-int verificador (int matrix_i[][], unsigned int sizeLinha_ui, unsigned int sizeColuna_ui){
+int verificador (int matrix_i[TAM_MATRIX][TAM_MATRIX]){
 
 	unsigned int i, j;
 
