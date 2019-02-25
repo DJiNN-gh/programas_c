@@ -21,7 +21,7 @@ int main (void){
 return 0;}
 
 // Funcao que gera uma determinada matriz 5x5
-void gerador (int matrix_i [5][5]){
+void gerador (int matrix_i [TAM_MATRIX][TAM_MATRIX]){
 
 	unsigned int i, j, k;
 
