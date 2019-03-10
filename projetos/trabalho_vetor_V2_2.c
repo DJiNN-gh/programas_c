@@ -43,12 +43,8 @@ int main (void){
 			case 'I':
 				printf("Qual valor deseja inserir? \n");
 				scanf("%d", &valor_i);
-				if (contagem_ui > TAM_VET){
-					printf("Sua lista esta cheia! Remova alguns registros antes de inserir novamente.\n");
-					break;}
-				else{
 				insersor(lista_i, valor_i, &contagem_ui);
-				break;}
+				break;
 
 			case 'O':
 				printf("Qual valor deseja remover? \n");
@@ -94,7 +90,8 @@ void chamador (unsigned int contador_ui){
 
 	printf("\t\t--MENU--\n\nEscolha uma das opcoes abaixo\n");
 	
-	printf("[I] Inserir\n");
+	if (contador_ui < TAM_VET){
+		printf("[I] Inserir\n");}
 	printf("[O] Deletar ocorrencia\n");
 	printf("[P] Deletar posicao\n");
 	printf("[A] Alterar\n");
@@ -107,7 +104,7 @@ void chamador (unsigned int contador_ui){
 // Funcao Insere
 int insersor (int array_i[], int valorInserir_i, unsigned int *contador_ui){
 
-	unsigned int i, j;
+	unsigned int i, aux;
 
 	for (i=0;i<=*contador_ui;i++){
 
@@ -115,27 +112,17 @@ int insersor (int array_i[], int valorInserir_i, unsigned int *contador_ui){
 
 			return 0;}}	// Ao tentar inserir um valor ja existente no vetor, nenhuma acao sera tomada, retornando para a funcao que a chamou
 
-	for (i=0;i<=*contador_ui;i++){
+	array_i[*contador_ui]=valorInserir_i;
 
-		if (valorInserir_i < array_i[i]){
+	for (i=0;i<*contador_ui;i++){
 
-			for (j=i;j<*contador_ui;j++){
-
-				array_i[*contador_ui]=array_i[*contador_ui-1];}
-				
-			array_i[i]=valorInserir_i;
-			*contador_ui+=1;
-			return 1;}}}
+	return 1;}
+		
 
 // Funcao Remove Ocorrencia
 int removedor_Ocorrencia (int array_i[], int valorRemover_i, unsigned int *contador_ui){
 
 	unsigned int i=0;
-
-	if (valorRemover_i == array_i[*contador_ui-1]){
-
-		*contador_ui-=1;
-		return 1;}
 
 	while (valorRemover_i != array_i[i]){
 
@@ -179,18 +166,17 @@ int alterador (int array_i[], int anterior_i, int novo_i, unsigned int contador_
 
 		if (array_i[i] == novo_i){
 			
-			return 0;}	// Ao tentar alterar um valor ja existente no vetor, nenhuma acao sera tomada, retornando para a funcao que a chamou
+			return 0;}}	// Ao tentar alterar um valor ja existente no vetor, nenhuma acao sera tomada, retornando para a funcao que a chamou
 
 		if (array_i[i] == anterior_i){
 
 			while (array_i[i] < novo_i){
 
 				array_i[i]=array_i[i+1];
-				i++;}}
+				i++;}
 			
 			array_i[i-1]=novo_i;}
-
-return 1;}
+	return 1;}
 
 // Funcao Busca
 int buscador (int array_i[], int valorBuscar_i, unsigned int contador_ui){

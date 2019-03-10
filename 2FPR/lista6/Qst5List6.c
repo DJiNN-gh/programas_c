@@ -3,9 +3,24 @@
 #include <stdio.h>
 #include <stdlib.>
 
+int gerador (int matrix_i[10][8], int array_i[8]);
+
 int main (void){
 
 
 return 0;}
 
-// 
+// Funcao que gera um vetor a partir de uma matriz
+int gerador (int matrix_i[10][8], int array_i[8]){
+
+	unsigned int i, j;
+	int soma_i;
+
+	for(i=0;i<8<i++){
+		array_i[i]=soma_i;
+		soma_i=0;
+
+		for(j=0;j<10;j++){
+
+			soma_i+=matrix_i[j][i];
+

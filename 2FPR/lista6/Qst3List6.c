@@ -11,9 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define TAM_MATRIX 5
-
-void gerador (void);
+void gerador (int matrix_i [5][5]);
 
 int main (void){
 
@@ -21,13 +19,13 @@ int main (void){
 return 0;}
 
 // Funcao que gera uma determinada matriz 5x5
-void gerador (int matrix_i [TAM_MATRIX][TAM_MATRIX]){
+void gerador (int matrix_i [5][5]){
 
 	unsigned int i, j, k;
 
-	for (i=0, k=1;i<TAM_MATRIX;i++, k++){
+	for (i=0, k=1;i<5;i++, k++){
 
-		for (j=0;j<TAM_MATRIX;){
+		for (j=0;j<5;j++){
 
 			matrix_i[i][j]=j+k;}}}
 

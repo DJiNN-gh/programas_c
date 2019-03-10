@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
+
+#define CHAR_TEST1 "JANEIRO"
+#define CHAR_TEST2 "janeiro"
 
 int calculador (char string_c[]);
 int buscador (char string_c[], char chara_c);
@@ -8,12 +12,21 @@ void substituidor (char string_c[], char charaOld_c, char charaNew_c);
 void trocador (char string_c[]);
 void inversor (char string_c[]);
 int palindromador (char string_c[]);
+int decisor (char string_c[]);
 
 int main (void){
 
-	char c[]="texto";
+	char s[]="texto";
+	char r[127];
 
-	printf("O tamanho do texto e: %d\n", calculador(c));
+	printf("O tamanho do texto e: %d\n", calculador(s));
+
+	printf("Insira um mes: \n");
+	scanf("%s", r);
+
+	printf("Mes: %s\n", r);
+	
+	printf("%d", decisor(r));
 
 return 0;}
 
@@ -97,4 +110,12 @@ int palindromador (char string_c[]){
 
 			return 0;}}
 
+return 1;}
+
+// Funcao que testa uma string e toma uma decisao
+int decisor (char string_c[]){
+
+	if (strcmp(string_c, CHAR_TEST1) == 0 || strcmp(string_c, CHAR_TEST2) == 0){
+
+		return 0;}
 return 1;}

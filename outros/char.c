@@ -4,8 +4,9 @@ int main (void){
 	
 	char c;
 	unsigned char unsg_c;
+	unsigned int unsg_i;
 
-	printf("O tamanho de C (char) em bytes e: %zu\t em bits e : %zu\n", sizeof c, sizeof c*8);
+	printf("O tamanho de C (char) em bytes e: %zu\n Em bits e : %zu\n", sizeof c, sizeof c*8);
 
 	c = 10;
 	c = 0xa;
@@ -22,13 +23,17 @@ int main (void){
 	printf("Valor de C: %d\n", unsg_c);
 
 	printf("\t--Tabela ASCII--\n");
+
+	for (unsg_i=0;unsg_i<256;unsg_i++){
+
+		printf("Valor: %d\tCaracter: %c\n", unsg_i, unsg_i);}
+
+	c = 'A';
+
+	printf("%c\n", c);
 	
-	unsg_c = 0xa;
+	c++;
 
-	printf("%c\t", unsg_c);
-/*
-	for (unsg_c=0;unsg_c<=0xFF;c++){
+	printf("%c\n", c);
 
-		printf("%c\t", c);}
-*/
 return 0;}

@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int buscador (int matrix_i[][], unsigned int sizeLinha_ui, unsigned int sizeColuna_ui, int valor);
+int buscador (int matrix_i[15][20], int valor, unsigned int linha);
 
 int main (void){
 
@@ -11,13 +11,13 @@ int main (void){
 return 0;}
 
 // Funcao que busca um determinado valor em uma determinada linha
-int buscador (int matrix_i[][], unsigned int sizeLinha_ui, unsigned int sizeColuna_ui, int valor){
+int buscador (int matrix_i[15][20], int valor, unsigned int linha){
 
 	unsigned int i, j;
 
-	for (i=0;i<sizeColuna_ui;i++){
+	for (i=linha-1;i<linha;i++){
 
-		for (j=0;j<sizeLinha_ui;j++){
+		for (j=0;j<20;j++){
 
 			if (matrix_i[i][j] == valor){
 
