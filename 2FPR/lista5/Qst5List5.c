@@ -9,7 +9,7 @@ int palindromador (char string_c[], unsigned int tam_ui);
 
 int main (void){
 
-	char s[];
+	char s[128];
 	unsigned int a;
 
 	printf("Insira um texto: \n");
