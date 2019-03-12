@@ -13,9 +13,9 @@ int main (void){
 	unsigned int a;
 
 	printf("Insira um texto: \n");
-	scanf("%s", &s);
+	scanf("%s", s);
 
-	a=strlen(&s);
+	a=strlen(s);
 
 	determinador(s, a);
 
