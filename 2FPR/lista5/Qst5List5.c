@@ -4,6 +4,7 @@ um palíndromo. */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int palindromador (char string_c[], unsigned int tam_ui);
 
@@ -17,7 +18,7 @@ int main (void){
 
 	a=strlen(s);
 
-	determinador(s, a);
+	palindromador(s, a);
 
 return 0;}
 
@@ -30,7 +31,7 @@ int palindromador (char string_c[], unsigned int tam_ui){		// Dois parâmetros s
 
 		if (*string_c == string_c[tam_ui-1]){
 
-			determinador (*string_c+1, tam_ui-1);}}
+			palindromador (*string_c+1, tam_ui-1);}}
 
 	else {
 
