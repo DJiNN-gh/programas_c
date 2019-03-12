@@ -17,10 +17,12 @@ int main (void){
 
 return 0;}
 
+// Função que procura uma determinada palavra em uma determinada matriz
 int cacador (char matrix_c[TAM][TAM], int *x, int *y){
 
 	unsigned int i, j;
-
+	
+	// A primeira análise busca a palavra na horizontal, sentido esquerda para a direita
 	for (i=0;i<20;i++){
 
 		for (j=0;j<20;j++){
@@ -32,8 +34,9 @@ int cacador (char matrix_c[TAM][TAM], int *x, int *y){
 					*x=j;
 					*y=i;
 
-					return 0;}}}}
-
+					return 1;}}}}	// Caso a palavra seja encontrada, a função irá retornar suas posições iniciais e o valor um, indicando sucesso
+	
+	// A segunda análise busca a palavra na horizontal, sentido direita para esquerda
 	for (i=19;i>=0;i--){
 
 		for (j=19;j>=0;j--){
@@ -45,8 +48,9 @@ int cacador (char matrix_c[TAM][TAM], int *x, int *y){
 					*x=j;
 					*y=i;
 
-					return 0;}}}}
+					return 1;}}}}
 
+	// A terceira análise busca a palavra na vertical, sentido cima para baixo
 	for (j=0;j<20;j++){
 
 		for (i=0;i<20;i++){
@@ -58,8 +62,9 @@ int cacador (char matrix_c[TAM][TAM], int *x, int *y){
 					*x=j;
 					*y=i;
 
-					return 0;}}}}
+					return 1;}}}}
 
+	// A quarta análise busca a palavra na vertical, sentido baixo para cima
 	for (j=19;j>=0;j--){
 
 		for (i=19;i>=0;i--){
@@ -71,5 +76,5 @@ int cacador (char matrix_c[TAM][TAM], int *x, int *y){
 					*x=j;
 					*y=i;
 
-					return 0;}}}}
-return 1;}
+					return 1;}}}}
+return 0;}	// Caso a palavra não seja encontrada, será retornado o valor zero, indicando falha
