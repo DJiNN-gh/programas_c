@@ -21,10 +21,12 @@ int main (void){
 
 return 0;}
 
-int palindromador (char string_c[], unsigned int tam_ui){
+// Funcao que identifica se uma string e um palindromo
+int palindromador (char string_c[], unsigned int tam_ui){		// Dois parâmetros são solitados, a string a ser analisada e o tamanho dessa string
 
 
-	if (tam_ui>=0){
+
+	if (tam_ui>=0){		// O tamanho da string é utilizado para controlar o caso geral e para movimentar a comparação da string
 
 		if (*string_c == string_c[tam_ui-1]){
 
@@ -32,6 +34,6 @@ int palindromador (char string_c[], unsigned int tam_ui){
 
 	else {
 
-		return 0;}
+		return 0;}	// No caso da condicional de comparação entre as duas posições da string ser falso, a função irá retornar zero, indicando falha
 
-return 1;}
+return 1;}	// Caso a sequência de chamadas recursiva de comparação seja verdadeira, a função irá retornar um, indicando sucesso
