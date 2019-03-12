@@ -31,7 +31,7 @@ int palindromador (char string_c[], unsigned int tam_ui){		// Dois parâmetros s
 
 		if (*string_c == string_c[tam_ui-1]){
 
-			palindromador (*string_c+=1, tam_ui-1);}}
+			palindromador (*string_c+=1, tam_ui-1);}}	// O endereço da posição inicial da string é acrescido em um, enquanto a posição final decresce igualmente
 
 	else {
 
