@@ -30,4 +30,4 @@ void multiplicador (int N, int V){
 		multiplicador(N, V-N);}
 
 	Q=V/N;
-	printf("Multiplo: %d\t", N*Q);}
+	printf("Multiplo: %u\t", N*Q);}

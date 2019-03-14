@@ -28,10 +28,10 @@ int palindromador (char string_c[], unsigned int tam_ui){
 
 		if (*string_c == string_c[tam_ui-1]){
 
-			determinador (*string_c+1, tam_ui-1);}}
+			determinador (*string_c+1, tam_ui-1);}
 
 	else {
 
-		return 0;}
+		return 0;}}
 
 return 1;}
