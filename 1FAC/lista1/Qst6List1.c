@@ -8,71 +8,74 @@ Exemplos:
 #include <stdlib.h>
 #include <string.h>
 
-#DEFINE FEV 31
-#DEFINE MAR 59
-#DEFINE ABR 90
-#DEFINE MAI 120
-#DEFINE JUN 151
-#DEFINE JUL 181
-#DEFINE AGO 212
-#DEFINE SET 243
-#DEFINE OUT 273
-#DEFINE NOV 304
-#DEFINE DEZ 334
+#define FEV 31
+#define MAR 59
+#define ABR 90
+#define MAI 120
+#define JUN 151
+#define JUL 181
+#define AGO 212
+#define SET 243
+#define OUT 273
+#define NOV 304
+#define DEZ 334
 
 int main (void){
 
 int dia, dOrdem;
-char mes[128];
+char mes[20];
 
-printf("Insira o dia e o nome do mes");
-scanf("%d % s", &dia, &mes);
+printf("Insira o dia: \n");
+scanf("%d", &dia);
+printf("Insira o mes: \n");
+fflush(stdin);
+scanf("%s", mes);
 
-if (stricmp (mes, "janeiro"){
+if (strcasecmp (mes, "janeiro")){
 	dOrdem=dia;
 	printf("%dº dia do ano", dOrdem);}
 else
-if (stricmp (mes, "fevereiro"){
+if (strcasecmp (mes, "fevereiro")){
 	dOrdem=dia+FEV;
 	printf("%dº dia do ano",dOrdem);}
 else
-if (stricmp (mes, "marco" || mes, "março"){
+if (strcasecmp (mes, "marco") || strcasecmp (mes, "março")){
 	dOrdem=dia+MAR;
 	printf("%dº dia do ano", dOrdem);}
 else
-if (stricmp (mes, "abril"){
+if (strcasecmp (mes, "abril")){
 	dOrdem=dia+ABR;
 	printf("%dº dia do ano", dOrdem);}
 else
-if (stricmp (mes, "maio");{
+if (strcasecmp (mes, "maio")){
 	dOrdem=dia+MAI;
 	printf("%dº dia do ano", dOrdem);}
 else
-if (stricmp (mes, "junho"){
+if (strcasecmp (mes, "junho")){
 	dOrdem=dia+JUN;
 	printf("%dº dia do ano", dOrdem);}
 else
-if (stricmp (mes, "julho"){
+if (strcasecmp (mes, "julho")){
 	dOrdem=dia+JUL;
 	printf("%dº dia do ano", dOrdem);}
 else
-if (stricmp (mes, "agosto"){
+if (strcasecmp (mes, "agosto")){
 	dOrdem=dia+AGO;
 	printf("%dº dia do ano", dOrdem);}
 else
-if (stricmp (mes, "setembro"){
+if (strcasecmp (mes, "setembro")){
 	dOrdem=dia+SET;
 	printf("%dº dia do ano", dOrdem);}
 else
-if (stricmp (mes, "outubro"){
+if (strcasecmp (mes, "outubro")){
 	dOrdem=dia+OUT;
 	printf("%dº dia do ano", dOrdem);}
 else
-if (stricmp (mes, "novembro"){
+if (strcasecmp (mes, "novembro")){
 	dOrdem=dia+NOV;
 	printf("%dº dia do ano", dOrdem);}
 else
-if (stricmp (mes, "dezembro");{
+if (strcasecmp (mes, "dezembro")){
 	dOrdem=dia+DEZ;
 	printf("%dº dia do ano", dOrdem);}
 

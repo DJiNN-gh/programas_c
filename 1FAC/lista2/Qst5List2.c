@@ -17,19 +17,19 @@ a um item. */
 #include <stdio.h>
 #include <stdlib.h>
 
-#DEFINE COD_CACHQ 100
-#DEFINE COD_BAUSP 101
-#DEFINE COD_BAUCO 102
-#DEFINE COD_HAMBG 103
-#DEFINE COD_CHESB 104
-#DEFINE COD_REFRI 105
+#define COD_CACHQ 100
+#define COD_BAUSP 101
+#define COD_BAUCO 102
+#define COD_HAMBG 103
+#define COD_CHESB 104
+#define COD_REFRI 105
 
-#DEFINE CACHQ 3.50
-#DEFINE BAUSP 4.50
-#DEFINE BAUCO 5.20
-#DEFINE HAMBG 3.00
-#DEFINE CHESB 4.00
-#DEFINE REFRI 2.50
+#define CACHQ 3.50
+#define BAUSP 4.50
+#define BAUCO 5.20
+#define HAMBG 3.00
+#define CHESB 4.00
+#define REFRI 2.50
 
 int main (void){
 

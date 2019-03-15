@@ -6,7 +6,7 @@ calcule o custo ao consumidor de determinado carro.*/
 #include <stdio.h>
 #include <stdlib.h>
 
-#DEFINE PCT 100
+#define PCT 100
 
 int main (void){
 

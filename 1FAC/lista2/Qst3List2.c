@@ -9,10 +9,10 @@ c) O valor da prestação para parcelamento com juros, em 10x, com 20% de acre
 #include <stdio.h>
 #include <stdlib.h>
 
-#DEFINE DESC 0.1
-#DEFINE JUROS 1.2
-#DEFINE PARC_5X 5
-#DEFINE PARC_10X 10 
+#define DESC 0.1
+#define JUROS 1.2
+#define PARC_5X 5
+#define PARC_10X 10 
 
 int main (void){
 

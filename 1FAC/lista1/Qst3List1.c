@@ -8,10 +8,10 @@ altura, utilizando as seguintes fórmulas:
 #include <stdio.h>
 #include <stdlib.h>
 
-#DEFINE VAR1 72.2	// Valor 1 para formula Homens
-#DEFINE VAR2 58		// Valor 2 para formula Homens
-#DEFINE VAR3 62.1	// Valor 1 para formula Mulheres
-#DEFINE VAR4 44.7	// Valor 2 para formula Mulheres
+#define VAR1 72.2	// Valor 1 para formula Homens
+#define VAR2 58		// Valor 2 para formula Homens
+#define VAR3 62.1	// Valor 1 para formula Mulheres
+#define VAR4 44.7	// Valor 2 para formula Mulheres
 
 int main (void){
 

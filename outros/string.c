@@ -16,9 +16,17 @@ int decisor (char string_c[]);
 
 int main (void){
 
+	
 	char s[]="texto";
-	char r[127];
+	char t[]="Texto";
+	char u[128];
+	char r[128];
 
+	
+	// Testando a biblioteca string.h
+	
+	printf("%d\n", strlen(s));
+	
 	printf("O tamanho do texto e: %d\n", calculador(s));
 
 	printf("Insira um mes: \n");

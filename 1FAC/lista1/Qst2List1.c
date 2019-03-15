@@ -17,7 +17,7 @@ Adulto		maiores de 18 anos
 int main (void){
 
 printf("Insira sua idade\n");
-scanf("%d, &idade);
+scanf("%d", &idade);
 
 do{
 if (idade<5){

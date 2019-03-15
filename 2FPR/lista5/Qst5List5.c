@@ -18,7 +18,7 @@ int main (void){
 
 	a=strlen(s);
 
-	palindromador(s, a);
+	printf("%d\n", palindromador(s, a));
 
 return 0;}
 
@@ -31,10 +31,10 @@ int palindromador (char string_c[], unsigned int tam_ui){		// Dois parâmetros s
 
 		if (*string_c == string_c[tam_ui-1]){
 
-			palindromador (*string_c+=1, tam_ui-1);}}	// O endereço da posição inicial da string é acrescido em um, enquanto a posição final decresce igualmente
+			palindromador (string_c+=1, tam_ui-1);}	// O endereço da posição inicial da string é acrescido em um, enquanto a posição final decresce igualmente
 
 	else {
 
-		return 0;}	// No caso da condicional de comparação entre as duas posições da string ser falso, a função irá retornar zero, indicando falha
+		return 0;}}	// No caso da condicional de comparação entre as duas posições da string ser falso, a função irá retornar zero, indicando falha
 
 return 1;}	// Caso a sequência de chamadas recursiva de comparação seja verdadeira, a função irá retornar um, indicando sucesso

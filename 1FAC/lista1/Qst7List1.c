@@ -7,9 +7,9 @@ hora trabalhada acima das 40 iniciais.*/
 #include <stdio.h>
 #include <stdlib.h>
 
-#DEFINE PHORA1 8
-#DEFINE PHORA2 12
-#DEFINE BONUS 320
+#define PHORA1 8
+#define PHORA2 12
+#define BONUS 320
 
 int main (void){
 

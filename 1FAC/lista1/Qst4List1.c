@@ -15,9 +15,9 @@ acima de 2500		40% do saldo médio */
 #include <stdio.h>
 #include <stdlib.h>
 
-#DEFINE PORC1 0.2	// Valores de calculo da porcentagem
-#DEFINE PORC2 0.3
-#DEFINE PORC3 0.4
+#define PORC1 0.2	// Valores de calculo da porcentagem
+#define PORC2 0.3
+#define PORC3 0.4
 
 int main (void){
 

@@ -7,47 +7,46 @@ sua condição de acordo com a tabela abaixo:
 
 IMC em adultos		Condição
 
-IMC < 18,5 
-18,5 ≤ IMC < 25,0 
-25,0 ≤ IMC < 30,0 
-30,0 ≤ IMC < 35,0 
-35,0 ≤ IMC < 40,0
-ICM ≥ 40,0
+IMC < 18,5 		Abaixo do peso
+18,5 ≤ IMC < 25,0 	Peso ideal
+25,0 ≤ IMC < 30,0 	Sobrepeso
+30,0 ≤ IMC < 35,0 	Obesidade grau 1
+35,0 ≤ IMC < 40,0	Obesidade grau 2
+ICM ≥ 40,0		Obesidade grau 3
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-#DEFINE ICM1	18.5
-#DEFINE	ICM2	25.5
-#DEFINE ICM3	30.0
-#DEFINE ICM4	35.0
-#DEFINE ICM5	40.0
+#define IMC1	18.5
+#define	IMC2	25.5
+#define IMC3	30.0
+#define IMC4	35.0
+#define IMC5	40.0
 
 int main (void){
 
-float peso, altura, icm;
+float peso, altura, imc;
 
 printf("Insira seu peso e altura (em m): \n");
 scanf("%f %f", &peso, &altura);
 
-icm=peso/(altura*altura);
+imc=peso/(altura*altura);
 
-if (icm < ICM1){
+if (imc < IMC1){
 	printf("Abaixo do peso");}
 else
-if (icm >= ICM1 && icm < ICM2);{
+if (imc >= IMC1 && imc < IMC2){
 	printf("Peso ideal");}
 else
-if (icm >= ICM2 && icm < ICM3){
+if (imc >= IMC2 && imc < IMC3){
 	printf("Sobrepeso");}
 else
-if (icm >= ICM3 && icm < ICM4){
-	printf("Obesidade grau I);}
+if (imc >= IMC3 && imc < IMC4){
+	printf("Obesidade grau I");}
 else
-if (icm >= ICM4 && icm < ICM5){
-	printf("Obesidade grau II);}
-else
-if (icm >= ICM5){
-	printf("Obesidade grau III);}
+if (imc >= IMC4 && imc < IMC5){
+	printf("Obesidade grau II");}
+else{
+	printf("Obesidade grau III");}
 }

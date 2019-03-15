@@ -17,11 +17,11 @@ A conta a ser apresentada ao cliente deve conter: o nome do hóspede, o tipo do
 #include <stdio.h>
 #include <stdlib.h>
 
-#DEFINE APTO_A 350
-#DEFINE APTO_B 275
-#DEFINE APTO_C 200
-#DEFINE APTO_D 150
-#DEFINE TXSVC 0.10
+#define APTO_A 350
+#define APTO_B 275
+#define APTO_C 200
+#define APTO_D 150
+#define TXSVC 0.10
 
 int main (void){
 

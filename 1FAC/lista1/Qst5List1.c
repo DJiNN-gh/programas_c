@@ -5,12 +5,12 @@ notas/moedas (100, 50, 20, 10, 5, 2 e 1) em que o valor pode ser decomposto.*/
 #include <stdio.h>
 #include <stdlib.h>
 
-#DEFINE CEM 100
-#DEFINE CINQ 50
-#DEFINE VINTE 20
-#DEFINE DEZ 10
-#DEFINE CINCO 5
-#DEFINE DOIS 2
+#define CEM 100
+#define CINQ 50
+#define VINTE 20
+#define DEZ 10
+#define CINCO 5
+#define DOIS 2
 
 int main (void){
 

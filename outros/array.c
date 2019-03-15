@@ -3,8 +3,10 @@
 int main (void){
 
 	char array_c[3];
+	char s[128];
 	int i, array_i[3];
 	int array_x[100];
+	int c;
 
 	printf("O tamanho de c (array char): %zu\n", sizeof array_c);
 	printf("O numero de elementos de c (array char): %zu\n\n", sizeof array_c / sizeof array_c[0]); // Pode-se utilizar a formula sizeof -variavel- / sizeof -tipo_variavel-
@@ -51,5 +53,8 @@ int main (void){
 		for(i=2;i<100;i++){	// Fibonacci
 			array_x[i]=array_x[i-1]+array_x[i-2];
 			printf("Valor de X na posicao %d: %d\n", i, array_x[i]);}
+
+		for(c=0;c<128;c++){
+			printf("O endereco do array s (string) na posicao %d e: %p\n", c, s+c);}
 
 	return 0;}

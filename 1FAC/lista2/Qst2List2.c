@@ -18,14 +18,13 @@ pesoPlaneta = (pesoTerra/10) * gravidadePlaneta */
 #include <stdio.h>
 #include <stdlib.h>
 
-#DEFINE MER 0.37
-#DEFINE VEN 0.88
-#DEFINE MAR 0,38
-#DEFINE JUP 2,64
-#DEFINE SAT 1,15
-#DEFINE URN 1,17
-#DEFINE NET 1,18
-#DEFINE GRV 10
+#define MER 0.37
+#define VEN 0.88
+#define MAR 0,38
+#define JUP 2,64
+#define SAT 1,15
+#define URN 1,17
+#define NET 1,18
 
 int main (void){
 
@@ -38,32 +37,32 @@ scanf("%f %d", &peso, &numPlaneta);
 switch (numPlaneta){
 
 case 1: 
-	pPlaneta=(peso/GRV)*MER;
-	printf("Seu peso em Mercurio e: %.2f\n", pPlaneta);
+	pPlaneta=peso*MER;
+	printf("Seu peso em Mercurio e: %.2fKgf\n", pPlaneta);
 	break;
 case 2:
-	pPlaneta=(peso/GRV)*VEN;
-	printf("Seu peso em Venus e: %.2f\n", pPlaneta);
+	pPlaneta=peso*VEN;
+	printf("Seu peso em Venus e: %.2f\nKgf", pPlaneta);
 	break;
 case 3:
-	pPlaneta=(peso/GRV)*MAR;
-	printf("Seu peso em Marte e: %.2f\n", pPlaneta);
+	pPlaneta=peso*MAR;
+	printf("Seu peso em Marte e: %.2f\nKgf", pPlaneta);
 	break;
 case 4:
-	pPlaneta=(peso/GRV)*JUP;
-	printf("Seu peso em Jupiter e: %.2f\n", pPlaneta);
+	pPlaneta=peso*JUP;
+	printf("Seu peso em Jupiter e: %.2f\nKgf", pPlaneta);
 	break;
 case 5:
-	pPlaneta=(peso/GRV)*SAT;
-	printf("Seu peso em Saturno e: %.2f\n", pPlaneta);
+	pPlaneta=peso*SAT;
+	printf("Seu peso em Saturno e: %.2f\nKgf", pPlaneta);
 	break;
 case 6:
-	pPlaneta=(peso/GRV)*URN;
-	printf("Seu peso em Urano e: %.2f\n", pPlaneta);
+	pPlaneta=peso*URN;
+	printf("Seu peso em Urano e: %.2f\nKgf", pPlaneta);
 	break;
 case 7:
-	pPlaneta=(peso/GRV)*NET;
-	printf("Seu peso em Netuno e: %.2f\n", pPlaneta);
+	pPlaneta=peso*NET;
+	printf("Seu peso em Netuno e: %.2f\nKgf", pPlaneta);
 	break;
 default:
 	printf("Insira corretamente o numero correspondente a um planeta!\n");
