@@ -78,3 +78,12 @@ int cacador (char matrix_c[TAM][TAM], int *x, int *y){
 
 					return 1;}}}}
 return 0;}	// Caso a palavra não seja encontrada, será retornado o valor zero, indicando falha
+
+/* Outra maneira de localizar a palavra é através do seguinte circuito lógico:
+ *
+ * if((matrix_c[i][j] == 'C' && matrix_c[i][j+1] == 'A' && matrix_c[i][j+2] == 'S' && matrix_c[i][j+3] == 'A') || (matrix_c[i][j] == 'C' && matrix_c[i][j-1] == 'A' && matrix_c[i][j-2] == 'S' && matrix_c[i][j-3] == 'A') || (matrix_c[i][j] == 'C' && matrix_c[i+1][j] == 'A' && matrix_c[i+2][j] == 'S' && matrix_c[i+3][j] == 'A') || (matrix_c[i][j] == 'C' && matrix_c[i-1][j] == 'A' && matrix_c[i-2][j] == 'A' && matrix_c[i-3][j] == 'A'))
+ *
+ *
+ * Esse circuito concatena todos os testes possíveis para encontrar a palavra. Primeiro, o teste é realizado para identificar se as três letras posteriores ao C na horiontal 
+ * são as necessárias para completar a palavra. Depois, são realizados os testes para a esquerda, cima e abaixo da letra C encontrada. O teste usa AND para a sequência de
+ * caracteres e OR para as possíveis orientações */
