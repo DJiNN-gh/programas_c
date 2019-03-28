@@ -14,30 +14,18 @@ e. Determinar o funcionário que menos vendeu durante o ano. */
 #include <string.h>
 #include <ctype.h>
 
-#define CHAR_UPP1 "JANEIRO"
-#define CHAR_UPP2 "FEVEREIRO"
-#define CHAR_UPP3 "MARCO"
-#define CHAR_UPP4 "ABRIL"
-#define CHAR_UPP5 "MAIO"
-#define CHAR_UPP6 "JUNHO"
-#define CHAR_UPP7 "JULHO"
-#define CHAR_UPP8 "AGOSTO"
-#define CHAR_UPP9 "SETEMBRO"
-#define CHAR_UPP10 "OUTUBRO"
-#define CHAR_UPP11 "NOVEMBRO"
-#define CHAR_UPP12 "DEZEMBRO"
-#define CHAR_LOW1 "janeiro"
-#define CHAR_LOW2 "fevereiro"
-#define CHAR_LOW3 "marco"
-#define CHAR_LOW4 "abril"
-#define CHAR_LOW5 "maio"
-#define CHAR_LOW6 "junho"
-#define CHAR_LOW7 "julho"
-#define CHAR_LOW8 "agosto"
-#define CHAR_LOW9 "setembro"
-#define CHAR_LOW10 "outubro"
-#define CHAR_LOW11 "novembro"
-#define CHAR_LOW12 "dezembro"
+#define CHAR_UPP1 "Janeiro"
+#define CHAR_UPP2 "Fevereiro"
+#define CHAR_UPP3 "Marco"
+#define CHAR_UPP4 "Abril"
+#define CHAR_UPP5 "Maio"
+#define CHAR_UPP6 "Junho"
+#define CHAR_UPP7 "Julho"
+#define CHAR_UPP8 "Agosto"
+#define CHAR_UPP9 "Setembro"
+#define CHAR_UPP10 "Outubro"
+#define CHAR_UPP11 "Novembro"
+#define CHAR_UPP12 "Dezembro"
 
 double anual (float matrix_f[12][10]);
 float mensal (float matrix_f[12][10], char string_c[]);
@@ -48,7 +36,7 @@ char menor (float matrix_f[12][10]);
 int main (void){
 
 	float matrix_f[12][10];
-	char s[127];
+	char s[128];
 	char c;
 
 	printf("R$ %.2f\n", anual(matrix_f));
@@ -87,7 +75,7 @@ float mensal (float matrix_f[12][10], char string_c[]){
 	unsigned int i;
 	float soma_f=0;
 
-	if (strcmp(string_c, CHAR_UPP1) == 0 || strcmp(string_c, CHAR_LOW1) == 0){
+	if (strcasecmp(string_c, CHAR_UPP1) == 0){
 
 		for (i=0;i<10;i++){
 
@@ -95,7 +83,7 @@ float mensal (float matrix_f[12][10], char string_c[]){
 		
 		return soma_f;}
 	else
-	if (strcmp(string_c, CHAR_UPP2) == 0 || strcmp(string_c, CHAR_LOW2) == 0){
+	if (strcasecmp(string_c, CHAR_UPP2) == 0){
 
 		for (i=0;i<10;i++){
 
@@ -104,7 +92,7 @@ float mensal (float matrix_f[12][10], char string_c[]){
 		return soma_f;}
 
 	else		
-	if (strcmp(string_c, CHAR_UPP3) == 0 || strcmp(string_c, CHAR_LOW3) == 0){
+	if (strcasecmp(string_c, CHAR_UPP3) == 0){
 
 		for (i=0;i<10;i++){
 
@@ -112,7 +100,7 @@ float mensal (float matrix_f[12][10], char string_c[]){
 		
 		return soma_f;}
 	else
-	if (strcmp(string_c, CHAR_UPP4) == 0 || strcmp(string_c, CHAR_LOW4) == 0){
+	if (strcasecmp(string_c, CHAR_UPP4) == 0){
 
 		for (i=0;i<10;i++){
 
@@ -120,7 +108,7 @@ float mensal (float matrix_f[12][10], char string_c[]){
 		
 		return soma_f;}
 	else
-	if (strcmp(string_c, CHAR_UPP5) == 0 || strcmp(string_c, CHAR_LOW5) == 0){
+	if (strcasecmp(string_c, CHAR_UPP5) == 0){
 
 		for (i=0;i<10;i++){
 
@@ -128,7 +116,7 @@ float mensal (float matrix_f[12][10], char string_c[]){
 		
 		return soma_f;}
 	else
-	if (strcmp(string_c, CHAR_UPP6) == 0 || strcmp(string_c, CHAR_LOW6) == 0){
+	if (strcasecmp(string_c, CHAR_UPP6) == 0 || strcmp(string_c, CHAR_LOW6) == 0){
 
 		for (i=0;i<10;i++){
 
@@ -136,7 +124,7 @@ float mensal (float matrix_f[12][10], char string_c[]){
 		
 		return soma_f;}
 	else
-	if (strcmp(string_c, CHAR_UPP7) == 0 || strcmp(string_c, CHAR_LOW7) == 0){
+	if (strcasecmp(string_c, CHAR_UPP7) == 0){
 
 		for (i=0;i<10;i++){
 
@@ -144,7 +132,7 @@ float mensal (float matrix_f[12][10], char string_c[]){
 		
 		return soma_f;}
 	else
-	if (strcmp(string_c, CHAR_UPP8) == 0 || strcmp(string_c, CHAR_LOW8) == 0){
+	if (strcasecmp(string_c, CHAR_UPP8) == 0){
 
 		for (i=0;i<10;i++){
 
@@ -152,7 +140,7 @@ float mensal (float matrix_f[12][10], char string_c[]){
 		
 		return soma_f;}
 	else
-	if (strcmp(string_c, CHAR_UPP9) == 0 || strcmp(string_c, CHAR_LOW9) == 0){
+	if (strcasecmp(string_c, CHAR_UPP9) == 0){
 
 		for (i=0;i<10;i++){
 
@@ -160,7 +148,7 @@ float mensal (float matrix_f[12][10], char string_c[]){
 		
 		return soma_f;}
 	else
-	if (strcmp(string_c, CHAR_UPP10) == 0 || strcmp(string_c, CHAR_LOW10) == 0){
+	if (strcasecmp(string_c, CHAR_UPP10) == 0){
 
 		for (i=0;i<10;i++){
 
@@ -168,7 +156,7 @@ float mensal (float matrix_f[12][10], char string_c[]){
 		
 		return soma_f;}
 	else
-	if (strcmp(string_c, CHAR_UPP11) == 0 || strcmp(string_c, CHAR_LOW11) == 0){
+	if (strcasecmp(string_c, CHAR_UPP11) == 0){
 
 		for (i=0;i<10;i++){
 
@@ -176,7 +164,7 @@ float mensal (float matrix_f[12][10], char string_c[]){
 		
 		return soma_f;}
 	else
-	if (strcmp(string_c, CHAR_UPP12) == 0 || strcmp(string_c, CHAR_LOW12) == 0){
+	if (strcasecmp(string_c, CHAR_UPP12) == 0){
 
 		for (i=0;i<10;i++){
 

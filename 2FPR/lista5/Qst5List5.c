@@ -23,7 +23,7 @@ int main (void){
 return 0;}
 
 // Função que identifica se uma string é um palíndromo
-int palindromador (char string_c[], unsigned int tam_ui){		// Dois parâmetros são solitados, a string a ser analisada e o tamanho dessa string
+int palindromador (char string_c[], unsigned int tam_ui){		// Dois parâmetros são solicitados, a string a ser analisada e o tamanho dessa string
 
 
 
