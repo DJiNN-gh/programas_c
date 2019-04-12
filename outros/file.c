@@ -8,7 +8,7 @@
 
 //void fatal (FILE msg);
 
-int main (){
+int main (void){
 
 	FILE *fp;
 	char string_c[MAXCHAR];
@@ -39,6 +39,22 @@ int main (){
 		printf("%d\n", i);}
 
 return 0;}
+
+void copiador (char *string_c){
+
+	FILE *f, *g;
+	
+	f=fopen(string_c, "r");
+	g=fopen(string_c, "w");
+
+	if (f == NULL){
+		printf("Nao foi possivel abrir o arquivo\n");
+		return 1;}
+	
+	
+	while (fgets(string_c, MAXCHAR, f) != NULL){
+
+		fprintf(f, 
 
 /*void fatal (FILE msg){
 	
