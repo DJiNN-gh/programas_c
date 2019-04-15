@@ -37,4 +37,5 @@ int determinador (char *string_c){
 
 		if(strcasecmp (str, string_c) == 0){
 			cont++;}}
+
 return cont;}

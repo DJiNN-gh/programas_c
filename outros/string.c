@@ -13,6 +13,7 @@ void trocador (char string_c[]);
 void inversor (char string_c[]);
 int palindromador (char string_c[]);
 int decisor (char string_c[]);
+void aumentador (char string_c[]);
 
 int main (void){
 
@@ -21,6 +22,7 @@ int main (void){
 	char t[]="Texto";
 	char u[128];
 	char r[128];
+	char q[128];
 
 	
 	// Testando a biblioteca string.h
@@ -34,11 +36,20 @@ int main (void){
 
 	printf("Mes: %s\n", r);
 	
-	printf("%d", decisor(r));
+	printf("%d\n", decisor(r));
+
+	printf("Insira sua palavra em minusculo: \n");
+	scanf("%s", q);
+
+	aumentador(q);
+
+	puts(q);
+
+	putchar('\n');
 
 return 0;}
 
-// Funcao que calcula o tamanho de uma string
+// Função que calcula o tamanho de uma string
 int calculador (char string_c[]){
 
 	unsigned int i=0, tam_ui;
@@ -49,7 +60,7 @@ int calculador (char string_c[]){
 
 return i;}
 
-// Funcao que busca uma ocorrencia numa string
+// Função que busca uma ocorrencia numa string
 int buscador (char string_c[], char chara_c){
 
 	unsigned int i=0, cont_ui=0, tam_ui;
@@ -64,7 +75,7 @@ int buscador (char string_c[], char chara_c){
 
 return cont_ui;}
 
-// Funcao que troca um caracter da string por um novo
+// Função que troca um caracter da string por um novo
 void substituidor (char string_c[], char charaOld_c, char charaNew_c){
 
 	unsigned int i=0, j=0, tam_ui;
@@ -77,7 +88,7 @@ void substituidor (char string_c[], char charaOld_c, char charaNew_c){
 
 			string_c[i]=charaNew_c;}}}
 
-// Funcao que troca o primeiro caracter com o segundo caracter de uma string
+// Função que troca o primeiro caracter com o segundo caracter de uma string
 void trocador (char string_c[]){
 
 	unsigned int i=0, tam_ui;
@@ -91,7 +102,7 @@ void trocador (char string_c[]){
 		string_c[i+1]=string_c[i];
 		string_c[i]=aux_c;}}
 
-// Funcao que inverte uma string
+// Função que inverte uma string
 void inversor (char string_c[]){
 
 	unsigned int i=0, j;
@@ -105,7 +116,7 @@ void inversor (char string_c[]){
 		string_c[j]=string_c[i];
 		string_c[i]=aux_c;}}
 
-// Funcao que verifica se a string e um palindromo
+// Função que verifica se a string e um palindromo
 int palindromador (char string_c[]){
 
 	unsigned int i=0, j;
@@ -120,10 +131,19 @@ int palindromador (char string_c[]){
 
 return 1;}
 
-// Funcao que testa uma string e toma uma decisao
+// Função que testa uma string e toma uma decisao
 int decisor (char string_c[]){
 
 	if (strcmp(string_c, CHAR_TEST1) == 0 || strcmp(string_c, CHAR_TEST2) == 0){
 
 		return 0;}
 return 1;}
+
+// Função que transforma uma string em caixa alta
+void aumentador (char string_c[]){
+
+	int tam=strlen(string_c);
+
+	for (unsigned int i=0;i<tam;i++){
+
+		string_c[i]=toupper(string_c[i]);}}

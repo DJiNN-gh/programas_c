@@ -53,7 +53,7 @@ int determinador (int matrix_i[20][20]){
 
 			arrayB_i[i]+=matrix_i[j][i];}}
 
-	for (i=0, j=0;i<20;i++, j++){
+	for (i=0;i<20;i++){
 
 		a+=matrix_i[i][j];}
 

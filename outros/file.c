@@ -6,23 +6,24 @@
 
 #define MAXCHAR 1000
 
-//void fatal (FILE msg);
+void fatal (FILE msg);
 
 int main (void){
 
-	FILE *fp;
+	FILE *fp;	// Variável que recebe stream do arquivo
 	char string_c[MAXCHAR];
 	int i;
-	char* arq = "/Users/allanlopes/Documents/Gloom - Projeto Tradução/Arq002(Monarca_amarelo_1).rtf";
-	char* arq2 = "/Users/allanlopes/programas_c/2FPR/lista7/arq.txt";
+	int leitura_i;
+	char* arq = "/Users/allanlopes/Documents/Gloom - Projeto Tradução/Arq002(Monarca_amarelo_1).rtf";	// Variável que armazena o endereço do arquivo
+	char* arq2 = "/Users/allanlopes/programas_c/2FPR/lista7/arq.txt";	// Variável que armazena o endereço do arquivo
 
 	fp=fopen(arq, "r");
 
-	//fatal(fp);
+	fatal(fp);
 	
 	if (fp == NULL){
 		printf("Nao foi possivel abrir o arquivo\n");
-		return 1;}
+		exit(1);}
 
 	while (fgets(string_c, MAXCHAR, fp) != NULL){
 		printf("%s", string_c);}
@@ -35,12 +36,13 @@ int main (void){
 		printf("Nao foi possivel abrir o arquivo\n");
 		return 1;}
 
-	while (fscanf(fp, i) != NULL){
-		printf("%d\n", i);}
+	/*while (fscanf(fp, "%s", 
+	fscanf(fp, "%d", &leitura_i);
+	printf("%d\n", leitura_i);*/
 
 return 0;}
 
-void copiador (char *string_c){
+/*void copiador (char *string_c){
 
 	FILE *f, *g;
 	
@@ -54,11 +56,11 @@ void copiador (char *string_c){
 	
 	while (fgets(string_c, MAXCHAR, f) != NULL){
 
-		fprintf(f, 
+		fprintf(f, */
 
-/*void fatal (FILE msg){
+void fatal (FILE msg){
 	
 	if (msg == NULL){
 		printf("Nao foi possivel abrir o arquivo");
 		exit(1);}}
-*/
+

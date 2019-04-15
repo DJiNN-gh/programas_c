@@ -20,17 +20,46 @@ void manipulador (char string_c[]){
 	unsigned int i, j;
 	char aux_c;
 
-	tam=strlen(string_c);
-	j=tam-1;
+	j=strlen(string_c);
 
-	for (i=0;i<tam;i++){
+	for (i=0;i<j;i++){
+		string_c[i]=toupper(string_c[i])}
 
-		if (string_c[i] != 0x65 || string_c[i] != 0x69 || string_i[i] != 0x73 || string_i[i] != 0x79 || string_c[i] != 0x85 || string_i[i] != 0x97 || string_i[i] != 0x101 || string_i[i] != 0x105 || string_i[i] != 0x111 || string_i[i] != 0x117){
+	while (i <= j){
 
-			while (string_c[j] == 0x65 || string_c[j] == 0x69 || string_i[j] == 0x73 || string_i[j] == 0x79 || string_c[j] == 0x85 || string_i[j] == 0x97 || string_i[j] == 0x101 || string_i[j] == 0x105 || string_i[j] == 0x111 || string_i[j] == 0x117){
+		while (string_c[i] == 0x65 || string_c[i] == 0x69 || string_i[i] == 0x73 || string_i[i] == 0x79 || string_c[i] == 0x85){
 
-				j--;}
+			i++;
+
+			while (string_c[j] == 0x65 || string_c[j] == 0x69 || string_i[j] == 0x73 || string_i[j] == 0x79 || string_c[j] == 0x85){
+
+				j--;
 
 			aux_c=string_i[i];
 			string_i[i]=string_i[j];
-			string_i[j]=aux_c;}}}
+			string_i[j]=aux_c;}}}}
+
+/* Função que testa as letras
+ *
+ * int vogal (char c){
+ *
+ * 	c=toupper(c);
+ *
+ * 	if (c == 0x65 || c == 0x69 || c == 0x73 || c == 0x79 || c == 0x85){
+ *
+ * 		return 0;}
+ *
+ * 	else{
+ *
+ * 		return 1;}}
+ *
+ *
+ * Troca das letras
+ *
+ * 	while (vogal(s[i]) == 0 && (i < j)){
+ *
+ * 		i++;}}
+ *
+ * 	while (vogal(s[i]) == 0 && (i < j)){
+ *
+ * 		j--;}}

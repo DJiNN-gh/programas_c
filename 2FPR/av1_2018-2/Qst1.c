@@ -38,3 +38,20 @@ float recursor (float array_f[], unsigned int tam_ui){
 		recursor(array_f, tam_ui-1);}
 
 return maior_f;}
+
+/* Resolução alternativa
+ * float questao01 (float v[], int q){
+ *
+ * 	if (q > 1){	// Caso Geral
+ *		
+ *		if(v[q-1] >= questao01(v, q-1){
+ *
+ *			return v[q-1];}
+ *
+ *		else{
+ *			
+ *			return questao01(v, q-1);}}
+ *
+ *		else{
+ *
+ *			return v[0];}}
