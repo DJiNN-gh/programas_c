@@ -18,8 +18,8 @@ void aumentador (char string_c[]);
 int main (void){
 
 	
-	char s[]="texto";
-	char t[]="Texto";
+	char s[]="1998";
+	char t[]="1999";
 	char u[128];
 	char r[128];
 	char q[128];
@@ -27,7 +27,7 @@ int main (void){
 	
 	// Testando a biblioteca string.h
 	
-	printf("%d\n", strlen(s));
+	printf("%lu\n", strlen(s));
 	
 	printf("O tamanho do texto e: %d\n", calculador(s));
 
@@ -46,6 +46,15 @@ int main (void){
 	puts(q);
 
 	putchar('\n');
+
+	if (strcmp(s, t) <= 0)
+		printf("Resultado: %s\n", s);
+	else
+		printf("Resultado: %s\n", t);
+
+	strcpy(t, s);
+	printf("%s\n", s);
+	printf("%s\n", t);
 
 return 0;}
 
