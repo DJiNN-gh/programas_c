@@ -1,37 +1,47 @@
 #include <stdio.h>
 
-/* 
+/* Aritméticos
+ *
  * =	atribuição
- * ==	igualdade
- * !=	diferença
+ * + -	adição e subtração	binários
  * + -	positivo e negativo	unários
- * + -	soma e subtração	binários
  * * /	multiplicação e divisão	binários
  * %	módulo ou resto		binário
- * ++	incremento		operador
- * --	decremento		operador
+ * ++	incremento		unário
+ * --	decremento		unário
+ * 
+ * Comparativos
+ *
+ * ==	igualdade		binário
+ * !=	diferença		binário
+ * >	maior que		binário
+ * <	menor que		binário
+ * >=	maior que ou igual	binário
+ * <=	menor que ou igual	binário
+ *
+ * Lógicos
  *
  * Conjunção (E, AND, &&)
- * Proposição1	Proposição2	Saida
+ * Proposição1	Proposição2	Saída
  * 1		1		1
  * 1		0		0
  * 0		1		0
  * 0		0		0
  *
  * Disjunção (OU, OR, ||)
- * Proposição1	Proposição2	Saida
+ * Proposição1	Proposição2	Saída
  * 1		1		1
  * 1		0		1
  * 0		1		1
  * 0		0		0
  *
  * Negação (NAO, NOT, !)
- * Proposição	Saida
+ * Proposição	Saída
  * 1		0
  * 0		1
  *
  * Ou exclusivo (OUX, XOR, ˆ)
- * Proposição1	Proposição2	Saida
+ * Proposição1	Proposição2	Saída
  * 1		1		0
  * 1		0		1
  * 0		1		1

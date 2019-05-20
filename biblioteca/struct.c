@@ -24,7 +24,7 @@ enum sit {APROVADO, AVF, REPROVADO};
 typedef struct{
 	char nome[30];
 	float av1, av2, media;
-	unsigned char sit;} Taluno;
+	unsigned char sit;} tAluno;
 
 struct st{
 	int num[VAL1];
@@ -42,23 +42,24 @@ struct aniversario{				// Forma 1 de declarar uma struct
 	unsigned char mes;
 	short ano;};
 // Ou
-typedef struct pessoas{				// Forma 2 de declarar uma struct
+typedef struct{					// Forma 2 de declarar uma struct
 	char nome[VAL2];			// Evita o uso de declarações repetidas da tag struct
 	unsigned char dia;
 	unsigned char mes;
-	short ano;} Taniversario2;
+	short ano;} tAniversario2;
 
 
-void calculador (Taluno v[], int tam);
+void calculador (tAluno v[], unsigned int tam_ui);
+void organizador (tAniversario2 *list);
 
 int main (void){
 	
 	int i, j;
 
-	struct st s;
-	struct st t;
+	struct st s;	// Declarando uma variável para a struct st
+	struct st t;	// Declarando uma variável para a struct st
 
-	s.num[0]=2019010001;
+	s.num[0]=2019010001;	
 	s.id[0]='A';
 
 	t.num[0]=2019010002;
@@ -88,7 +89,7 @@ int main (void){
 
 	puts("\n");
 
-	Taniversario2 dados[3];
+	tAniversario2 dados[3];
 
 	strcpy(dados[0].nome, "Charles Babbage");
 	dados[0].dia=26;
@@ -115,11 +116,11 @@ return 0;}
 
 // Função que determina se um aluno está aprovado, em avaliação final ou reprovado
 // Será utilizado o enum para determinar a flag
-void calculador (Taluno a[], int tam){
+void calculador (tAluno a[], unsigned int tam_ui){
 
 	unsigned int i;
 
-	for(i=0;i<tam;i++){
+	for(i=0;i<tam_ui;i++){
 
 		a[i].media=(a[i].av1+a[i].av2)/2;
 		
@@ -132,3 +133,32 @@ void calculador (Taluno a[], int tam){
 			a[i].sit=REPROVADO;
 		else
 			a[i].sit=AVF;}}
+
+// Função que utiliza uma struct para organizar informações de uma pessoa
+// A struct serve como um conjunto de propriedades para o objeto (variável) utilizado
+// Os valores ficam armazenados na variável que chama a estrutura
+void organizador (tAniversario2 *list){
+
+	char opcao_c;
+	unsigned int i=0;
+
+	do {
+		printf("Insira o nome: \n");
+		scanf("%s", list[i].nome);
+
+		printf("Insira o dia do nascimento: \n");
+		scanf("%hhu", &list[i].dia);
+
+		printf("Insira o mes do nascimento: \n");
+		scanf("%hhu", &list[i].mes);
+
+		printf("Insira o ano do nascimento: \n");
+		scanf("%hi", &list[i].ano);
+
+		printf("Deseja realizar outro cadastro? \n");
+		scanf("%c", &opcao_c);
+		opcao_c=toupper(opcao_c);
+
+		i++;
+
+	} while (opcao_c == 'S');}

@@ -2,20 +2,35 @@
 #include <stdlib.h>
 
 void fatorial_1 ();
+// Protótipo de uma função
+// 
+// void					fatorial_1		( )
+//   ˆ					    ˆ			 ˆ
+//   |					    |			 |
+// Definição do tipo de retorno		Nome da função		Parâmetros da função
+//  
 void fatorial_2 (int n);
 int fatorial_3 (int n);
-float soma (float array_f[], int tam_vet_i);
-void inverte (float array_f[], int tam_vet_i);
-void binario (int valor);
+int calculador_1 ();
+int calculador_2 (int n);
+float calculador_3 (int n);
+void calculador_5 (int n, int *soma_i, float *media_f);
+void trocador (float *a, float *b);
+void inversor (float *array_f, unsigned int tam_ui);
+void conversor (int valor_i);
 
 
 /*
- *	Modelo gráfico do processamento de uma função
+ *	Modelo abstrato do processamento de uma função
  *
  *		////////	
  *	N  ->	/  fato/  ->	N!
  *  parâmetro	/rial  /     retorno
  *		////////
+ *
+ * É enviado um parâmetro para que a função o trabalhe.
+ * Então, um processamento é feito em cima desse parâmetro.
+ * Ao final, um resultado é retornado para quem chamou essa função.
  *
  */
 
@@ -83,65 +98,140 @@ return fat;}
  * 	Sem parâmetro, sem retorno
  * 
  * 2) Exibir os números de 1 a N
- * 	Com parâmetro (N), sem retorno
+ * 	Com parâmetro (n), sem retorno
  *
  * 3) Calcular a soma dos números de 1 a 1000
- * 	Sem parâmetro, com retorno (s)
+ * 	Sem parâmetro, com retorno (i)
  *
  * 4) Calcular a soma dos números de 1 a N
- * 	Com parâmetro (N), com retorno (s)
+ * 	Com parâmetro (n), com retorno (i)
  *
  * 5) Calculas S = 1+(1/2)+(1/4)+...+(1/N)
- * 	Com parâmetro (N), com retorno (s)
+ * 	Com parâmetro (n), com retorno (s)
  *
  * 6) Calcular S = (1/N!)+(2/(N-1)!)+...+(N-1)/2!+N
  * 	Com parâmetro (N), com retorno (s)
  *
- * 7) Calcular a soma e a mádia dos números de 1 a N
+ * 7) Calcular a soma e a média dos números de 1 a N
  *	Com parâmetro (N), com retorno (s, Media)
  *
  * 8) Trocar o valor de duas variáveis reais
  * 	Com parâmetro (a, b), com retorno (a, b)
+ * 
+ * 9) Calcular a soma de todos os valores de um vetor de reais
+ * 	Com parâmetro (vet, tam), com retorno (soma)
+ *
+ * 10) Inverter os elementos de um vetor de reais
+ * 	Com parâmetro (vet, tam), sem retorno
+ *
+ * 11) Converter e exibir um número inteiro em binário
+ * 	Com parâmetro (valor), sem retorno
  */
 
-// 1) Determinar a soma de todos os números de um vetor de X floats:
-float soma (float array_f[], int tam_vet_i){
+// 1) Função que exibe os números de 1 a 1000
+void exibidor_1 (){
 
-	int i;
-	float sum;
+	for (unsigned int i=1; i<=1000; i++){
 
-	for(i=0;i<tam_vet_i;i++){
+		printf("%u ", i);}}
+// 2) Função que exibe os números de 1 a N
+void exibidor_2 (int n){
 
-		sum+=array_f[i];}
+	for (unsigned int i=1; i<=n; i++){
+
+		printf("%u ", i);}}
+
+// 3) Função que calcula a soma dos números de 1 a 1000
+int calculador_1 (){
+
+	int soma_i=0;
+
+	for (unsigned int i=1;i<=1000;i++){
+
+		soma_i+=i;}
+
+return soma_i;}
+
+// 4) Função que calcula a soma dos números de 1 a N
+int calculador_2 (int n){
+
+	int soma_i=0;
+
+	for (unsigned int i=1; i<=n; i++){
+
+		soma_i+=i;}
+
+return soma_i;}
+
+// 5) Função que calcula a soma de expoentes negativos
+float calculador_3 (int n){
+
+	float soma_f=0;
+
+	for (unsigned int i=1;i<=n; i+=i){
+
+		soma_f+=1/i;}
+
+return soma_f;}
+
+// 6) Função que calcula
+
+
+// 7) Função que calcula a soma dos números de 1 a N e tira a média
+void calculador_5 (int n, int *soma_i, float *media_f){
+
+	for (unsigned int i=1;i<=n;i++){
+
+		*soma_i+=i;}
 	
-	return sum;}
+	*media_f=*soma_i/n;}
 
-// 2) Inverter os elementos de um vetor de float:
-void inverte (float array_f[], int tam_vet_i){
+// 8) Função que troca o valor de duas variáveis reais
+void trocador (float *a, float *b){
 
-	int i, j;
-	float aux;
+	float aux_f;
 
-	for(i=0,j=tam_vet_i-1;i<tam_vet_i/2;i++,j--){
+	aux_f=*a;
+	*a=*b;
+	*b=aux_f;}
 
-		aux=array_f[j];
+// 9) Função que calcula a soma de todos os números de um vetor de X valores reais
+float calculador_6 (float *array_f, unsigned int tam_ui){
+
+	unsigned int i;
+	float soma_f;
+
+	for (i=0;i<tam_ui;i++){
+
+		soma_f+=array_f[i];}
+	
+return soma_f;}
+
+// 10) Função que inverte os elementos de um vetor de reais
+void inversor (float *array_f, unsigned int tam_ui){
+
+	unsigned int i, j;
+	float aux_f;
+
+	for (i=0,j=tam_ui-1;i<tam_ui/2;i++,j--){
+
+		aux_f=array_f[j];
 		array_f[j]=array_f[i];
-		array_f[i]=aux;}}
+		array_f[i]=aux_f;}}
 
-// 3) Exibir um número inteiro em binário:
-void binario (int valor){
+// 11) Função que exibe um número inteiro em binário
+void conversor (int valor_i){
 	
-	int i=0, j, k, cont=0;
+	unsigned int i=0, j, k, cont_ui=0;
 	int array_i[128];
 
 	do{
-		array_i[i]=valor%2;
-		valor/=2;
-		cont++;	i++;
-	} while (valor != 0);
+		array_i[i]=valor_i%2;
+		valor_i/=2;
+		cont_ui++;
+		i++;
+	} while (valor_i != 0);
 
-	for(j=cont-1, k=1;j>=0;j--, k++){
+	for (j=cont_ui-1, k=1;j>=0;j--, k++){
 
 		printf("Digito %d: %d\n", k, array_i[j]);}}
-
-// 4) 

@@ -18,8 +18,8 @@ void aumentador (char string_c[]);
 int main (void){
 
 	
-	char s[]="1998";
-	char t[]="1999";
+	char s[]="2001";
+	char t[]="2010";
 	char u[128];
 	char r[128];
 	char q[128];
