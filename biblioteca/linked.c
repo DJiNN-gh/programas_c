@@ -6,12 +6,12 @@ typedef struct no{
 	no *prox;
 	}tNo;
 
-// Outra maneira de definir o ponteiro que linka a lista
+// Outra maneira de definir o ponteiro que "linka" a lista
 typedef tNo *tLista;
 
 void exibidor (tLista l);	// Função que exibe todos os valores armazenados numa estrutura
 tLista buscador (tLista l, int element_i);	// Função que busca por um determinado valor armazenado em uma estrutura
-int alterador (tLista l, int elementIn_, int elementOut_i);	// Função que altera um valor existente em uma estrutura por um novo valor
+int alterador (tLista l, int elementIn_i, int elementOut_i);	// Função que altera um valor existente em uma estrutura por um novo valor
 int insersor (tLista l, int element_i);	// Função que insere um valor na estrutura
 
 int main (void){
@@ -61,7 +61,7 @@ int alterador (tLista l, int elementIn_i, int elementOut_i){
 
 	return cont_ui;}
 
-int (tLista l, int element_i){
+int insersor (tLista l, int element_i){
 
 	tLista aux=(tLista) malloc(sizeof(tNo));
 
@@ -74,3 +74,23 @@ int (tLista l, int element_i){
 		aux->prox=l;
 		l=aux;
 		return 1;}}
+
+// Função que remove todas as estruturas de uma lista
+void destruidor (tLista *l){
+
+	tLista aux;
+
+	while (*l != NULL){
+
+		aux=*l;
+		*l=(*l)->prox;
+		free(aux);}}
+
+// Função que remove todas as estruturas de uma lista de maneira recursiva
+void rec_destruidor (tLista *l){
+
+	if (*l){
+
+		rec_destruidor(&(*l)->prox);
+		free(*l);
+		*l=NULL;}}

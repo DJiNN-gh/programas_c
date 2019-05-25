@@ -8,7 +8,8 @@ void fatorial_1 ();
 //   ˆ					    ˆ			 ˆ
 //   |					    |			 |
 // Definição do tipo de retorno		Nome da função		Parâmetros da função
-//  
+
+void fatorial_1 ();
 void fatorial_2 (int n);
 int fatorial_3 (int n);
 int calculador_1 ();
@@ -18,7 +19,6 @@ void calculador_5 (int n, int *soma_i, float *media_f);
 void trocador (float *a, float *b);
 void inversor (float *array_f, unsigned int tam_ui);
 void conversor (int valor_i);
-
 
 /*
  *	Modelo abstrato do processamento de uma função
@@ -174,7 +174,7 @@ float calculador_3 (int n){
 
 return soma_f;}
 
-// 6) Função que calcula
+// 6)
 
 
 // 7) Função que calcula a soma dos números de 1 a N e tira a média

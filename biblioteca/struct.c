@@ -137,28 +137,19 @@ void calculador (tAluno a[], unsigned int tam_ui){
 // Função que utiliza uma struct para organizar informações de uma pessoa
 // A struct serve como um conjunto de propriedades para o objeto (variável) utilizado
 // Os valores ficam armazenados na variável que chama a estrutura
-void organizador (tAniversario2 *list){
+void organizador (tAniversario2 *list, unsigned int pos_ui){
 
 	char opcao_c;
-	unsigned int i=0;
 
-	do {
 		printf("Insira o nome: \n");
-		scanf("%s", list[i].nome);
+		scanf("%s", list[pos_ui].nome);
 
 		printf("Insira o dia do nascimento: \n");
-		scanf("%hhu", &list[i].dia);
+		scanf("%hhu", &list[pos_ui].dia);
 
 		printf("Insira o mes do nascimento: \n");
-		scanf("%hhu", &list[i].mes);
+		scanf("%hhu", &list[pos_ui].mes);
 
 		printf("Insira o ano do nascimento: \n");
-		scanf("%hi", &list[i].ano);
+		scanf("%hi", &list[pos_ui].ano);
 
-		printf("Deseja realizar outro cadastro? \n");
-		scanf("%c", &opcao_c);
-		opcao_c=toupper(opcao_c);
-
-		i++;
-
-	} while (opcao_c == 'S');}
