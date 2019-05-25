@@ -9,7 +9,6 @@ void fatorial_1 ();
 //   |					    |			 |
 // Definição do tipo de retorno		Nome da função		Parâmetros da função
 
-void fatorial_1 ();
 void fatorial_2 (int n);
 int fatorial_3 (int n);
 int calculador_1 ();
