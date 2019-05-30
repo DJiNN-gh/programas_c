@@ -42,7 +42,7 @@ int main ()
 		switch (opcao)
 		{
 			//inserção
-			case 1: printf ("Entre com o número a ser inserido: ");
+			case 1: printf ("Entre com o numero a ser inserido: ");
 			        scanf ("%d", &num1);
 			        
 			        if (inserir (&L, num1) == TRUE) //ou apenas inserir (&L, num1)
@@ -51,12 +51,12 @@ int main ()
 					}
 					else
 					{
-						printf ("ERRO: Elemento não inserido!\n");
+						printf ("ERRO: Elemento nao inserido!\n");
 					}
 					break;
 				
 			//remoção
-			case 2: printf ("Entre com o número a ser removido: ");
+			case 2: printf ("Entre com o numero a ser removido: ");
 			        scanf ("%d", &num1);
 			        
 			        if (remover (&L, num1) != 0)
@@ -65,7 +65,7 @@ int main ()
 					}
 					else
 					{
-						printf ("ERRO: Elemento não removido!\n");
+						printf ("ERRO: Elemento nao removido!\n");
 					}
 					break;
 				
