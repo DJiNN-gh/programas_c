@@ -21,8 +21,9 @@ int fatorial_3 (int n);
 int calculador_1 ();
 int calculador_2 (int n);
 float calculador_3 (int n);
-void calculador_5 (int n, int *soma_i, float *media_f);
+void calculador_4 (int n, int *soma_i, float *media_f);
 void trocador (float *a, float *b);
+float calculador_5 (float *array_f, unsigned int tam_ui);
 void inversor (float *array_f, unsigned int tam_ui);
 void conversor (int valor_i);
 
@@ -179,7 +180,7 @@ float calculador_3 (int n){
 return soma_f;}
 
 // 6) Função que calcula a soma dos números de 1 a N e tira a média
-void calculador_5 (int n, int *soma_i, float *media_f){
+void calculador_4 (int n, int *soma_i, float *media_f){
 
 	for (unsigned int i=1;i<=n;i++){
 
@@ -197,7 +198,7 @@ void trocador (float *a, float *b){
 	*b=aux_f;}
 
 // 8) Função que calcula a soma de todos os números de um vetor de X valores reais
-float calculador_6 (float *array_f, unsigned int tam_ui){
+float calculador_5 (float *array_f, unsigned int tam_ui){
 
 	unsigned int i;
 	float soma_f;
