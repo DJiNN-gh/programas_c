@@ -116,7 +116,7 @@ return 0;}
 
 // Função que determina se um aluno está aprovado, em avaliação final ou reprovado
 // Será utilizado o enum para determinar a flag
-void calculador (tAluno a[], unsigned int tam_ui){
+void calculador (tAluno *a, unsigned int tam_ui){
 
 	unsigned int i;
 
@@ -137,19 +137,22 @@ void calculador (tAluno a[], unsigned int tam_ui){
 // Função que utiliza uma struct para organizar informações de uma pessoa
 // A struct serve como um conjunto de propriedades para o objeto (variável) utilizado
 // Os valores ficam armazenados na variável que chama a estrutura
-void organizador (tAniversario2 *list, unsigned int pos_ui){
+void organizador (tAniversario2 *list){
 
 	char opcao_c;
 
 		printf("Insira o nome: \n");
-		scanf("%s", list[pos_ui].nome);
+		scanf("%s", list[pos].nome);
 
 		printf("Insira o dia do nascimento: \n");
-		scanf("%hhu", &list[pos_ui].dia);
+		scanf("%hhu", &list[pos].dia);
 
 		printf("Insira o mes do nascimento: \n");
-		scanf("%hhu", &list[pos_ui].mes);
+		scanf("%hhu", &list[pos].mes);
 
 		printf("Insira o ano do nascimento: \n");
-		scanf("%hi", &list[pos_ui].ano);
-
+		scanf("%hi", &list[pos].ano);
+	
+		printf("Deseja inserir mais um registro?(S/N) \n");
+		scanf("%c", &opcao_c);
+		opcao_c=toupper(opcao_c);}

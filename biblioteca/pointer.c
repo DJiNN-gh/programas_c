@@ -10,8 +10,6 @@
  *
  */
 
-void operador (unsigned int *valor1, unsigned int *valor2);
-
 int main (void){
 
 	char opcao_c;
@@ -40,7 +38,7 @@ int main (void){
 	for (;i<3;i++){
 
 		printf("Elemento na posicao %u: %d\n", i, a[i]);
-		printf("O endereco da posicao %u e: %p\n", i, &a[i]); // Utilizando o operador & para buscar o endereço de cada posição. A utilização desse operador é opcional para vetores.
+		printf("O endereco da posicao %u e: %p\n", i, &a[i]); // Utilizando o operador & para buscar o endereço de cada posição. Nesse caso, a utilização desse operador é opcional para vetores.
 		printf("O endereco da posicao %u e: %p\n", i, (a+i));	// Utilizando a soma do endereço com um inteiro 4 bytes.
 		printf("O tamanho de a(int) e: %zu\n", sizeof(a));}
 
@@ -50,7 +48,7 @@ int main (void){
 	for (;c<5;c++){
 
 		printf("Elemento na posicao %u: %c, em hexa: %x\n", c, s[c], s[c]);
-		printf("O endereco da posicao %u e: %p\n", c, &s[c]); // Utilizando o operador & para buscar o endereço de cada posição. A utilização desse operador é opcional para vetores.
+		printf("O endereco da posicao %u e: %p\n", c, &s[c]); // Utilizando o operador & para buscar o endereço de cada posição. Nesse caso, a utilização desse operador é opcional para vetores.
 		printf("O endereco da posicao %u e: %p\n", c, (s+c));	// Utilizando a soma do endereço com um inteiro 1 byte.
 		printf("O tamanho de s(char) e: %zu\n", sizeof(s));}
 
@@ -73,25 +71,4 @@ int main (void){
 	printf("Elemento na quarta posicao: %c, em hexa: %x\n", *(s+3), *(s+3));
 	printf("Elemento na quinta posicao: %c, em hexa: %x\n", *(s+4), *(s+4));
 	
-
-	do{
-
-		printf("Deseja somar? \n");
-		scanf("%c", &opcao_c);	
-		opcao_c=toupper(opcao_c);
-
-		if (opcao_c == 'S'){
-			operador(&j, &k);}
-		
-		printf("Endereço de j: %d\n de k: %d", j, k);
-		
-	}while (opcao_c == 'S')
-
-
 return 0;}
-
-// Função que incrementa o endereço de duas variáveis
-void operador (unsigned int *valor1, unsigned int *valor2){
-
-	*valor1+=1;
-	*valor2=*(valor2+1);}

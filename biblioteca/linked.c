@@ -1,24 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct no{
-	int valor;
-	no *prox;
-	}tNo;
+#define TRUE 1
+#define FALSE 0
+
+// Exemplificando uma struct utilizada para guardar informações sobre álbuns de música
+typedef struct album{	// Primeira declaração feita para contornar chamada do ponteiro
+	char title[40];	// Chave que guarda o nome do álbum
+	char artist[40];// Chave que guarda o nome do artista
+	char genre[40]; // Chave que guarda o gênero do álbum
+	int date;	// Chave que guarda o ano de lançamento do álbum
+	no *next;	// Ponteiro que aponta para o próximo elemento da lista
+	}tAlbum;	// Nome da estrutura/lista
 
 // Outra maneira de definir o ponteiro que "linka" a lista
-typedef tNo *tLista;
-
-void exibidor (tLista l);	// Função que exibe todos os valores armazenados numa estrutura
-tLista buscador (tLista l, int element_i);	// Função que busca por um determinado valor armazenado em uma estrutura
-int alterador (tLista l, int elementIn_i, int elementOut_i);	// Função que altera um valor existente em uma estrutura por um novo valor
-int insersor (tLista l, int element_i);	// Função que insere um valor na estrutura
+typedef tAlbum *tLista;
 
 int main (void){
 
 	// Definindo a variável usando a variável tLista
 	// tLista l=NULL;
-	struct no *l=NULL;
+	struct album *l=NULL;
 
 return 0;}
 
