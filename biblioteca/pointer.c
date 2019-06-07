@@ -4,7 +4,7 @@
 
 /* 
  * Variáveis do tipo ponteiro (pointer) guardam o endereço para o conteúdo de alguma variável.
- * Essas variáveis possuem o tamanha da palavra correspondente à arquitetura do processador. 
+ * Essas variáveis possuem o tamanho da palavra correspondente à arquitetura do processador. 
  * O intervalo entre cada conteúdo, em memória, é do tamanho do tipo designado ao ponteiro na sua criação.
  * Exemplo: uma máquina x86 possui ponteiros de tamanho 32 bits enquanto uma máquina x64 possui ponteiros de tamanho 64 bits.
  *
@@ -56,7 +56,7 @@ int main (void){
 
 	// Demonstrando a aritmética de ponteiros
 	// Vetor de inteiros
-	// Aqui, é somado 1 à variável do tipo ponteiro para inteiros. O compilador irá subentender que o inteiro possui 4 bytes e irá acrescer 4 posições de memória na sua soma.
+	// Aqui, é somado 1 à variável do tipo ponteiro para inteiro. O compilador irá subentender que o inteiro possui 4 bytes e irá acrescer 4 posições de memória na sua soma.
 	printf("Elemento na primeira posicao: %d\n", *a);
 	printf("Elemento na segunda posicao: %d\n", *(a+1));
 	printf("Elemento na terceira posicao: %d\n", *(a+2));
@@ -64,7 +64,7 @@ int main (void){
 	putchar('\n');
 
 	// Vetor de caracteres
-	// Aqui, é somado 1 à variável do tipo ponteiro para caracteres. O compilador irá subentender que o inteiro possui 1 byte e irá acrescer 1 posição de memória na sua soma.
+	// Aqui, é somado 1 à variável do tipo ponteiro para caractere. O compilador irá subentender que o inteiro possui 1 byte e irá acrescer 1 posição de memória na sua soma.
 	printf("Elemento na primeira posicao: %c, em hexa: %x\n", *s, *s);
 	printf("Elemento na segunda posicao: %c, em hexa: %x\n", *(s+1), *(s+1));
 	printf("Elemento na terceira posicao: %c, em hexa: %x\n", *(s+2), *(s+2));
