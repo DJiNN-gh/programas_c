@@ -79,7 +79,7 @@ int main (void){
 
 	// Testando um array de inteiros
 	printf("O tamanho de i(array int): %zu\n", sizeof arrayA_i);
-	printf("O numero de elementos de i(array int): %zu\n\n", sizeof arrayA_i / sizeof array_i[0]);
+	printf("O numero de elementos de i(array int): %zu\n\n", sizeof arrayA_i / sizeof arrayA_i[0]);
 
 	arrayA_i[0]='D';
 	arrayA_i[1]=0x45;
@@ -118,7 +118,7 @@ int main (void){
 
 		for(i=2;i<TAM3;i++){	// Fibonacci
 			
-			arrayB_i[i]=array_x[i-1]+array_x[i-2];
+			arrayB_i[i]=arrayB_i[i-1]+arrayB_i[i-2];
 			printf("Valor de X na posicao %u: %d\n", i-2, arrayB_i[i]);}
 
 return 0;}
