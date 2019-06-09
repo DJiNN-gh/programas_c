@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-/* Aritméticos
+/* 
+ * Aritméticos
  *
  * =	atribuição
  * + -	adição e subtração	binários

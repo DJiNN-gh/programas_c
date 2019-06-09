@@ -4,7 +4,8 @@
 #define TAM2 50
 #define TAM3 23
 
-/* Vetores são alocações estáticas de memória, reservando um espaço contínuo na memória principal.
+/* 
+ * Vetores são alocações estáticas de memória, reservando um espaço contínuo na memória principal.
  * Vetores possuem a propriedade de reservarem apenas espaços do mesmo tipo/tamanho para toda a sua alocação.
  *
  * 	Declaração de um vetor de caracteres de oito posições
@@ -92,14 +93,14 @@ int main (void){
 
 	putchar('\n');
 
-		for(i=0;i<TAM1;i++){	// Preenchendo de 0 à 99
+		for(i=0;i<TAM1;i++){	// Preenchendo de 0 a 99
 			
 			arrayB_i[i]=i;
 			printf("Valor de X na posicao %u: %d\n", i, arrayB_i[i]);}
 
 		putchar('\n');
 		
-		for(i=0;i<TAM1;i++){	// Preenchendo de 1 à 100
+		for(i=0;i<TAM1;i++){	// Preenchendo de 1 a 100
 			
 			arrayB_i[i]=i+1;
 			printf("Valor de X na posicao %u: %d\n", i, arrayB_i[i]);}

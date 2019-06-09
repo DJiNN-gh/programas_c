@@ -19,6 +19,7 @@
  * Sua declaração é feita usando o operador *(indireção/dereferência) entre o tipo e nome da variável.
  * O intervalo entre cada conteúdo, em memória, é do tamanho do tipo designado ao ponteiro na sua criação.
  * Exemplo: uma máquina x86 possui ponteiros de tamanho 32 bits enquanto uma máquina x64 possui ponteiros de tamanho 64 bits.
+ * 
  * É possível criar uma cadeia de ponteiros que guardam endereços de ponteiros que apontam para o conteúdo de uma variável ou até mesmo para outros ponteiros. 
  * Não há limite para uma cadeia de ponteiros.
  *
