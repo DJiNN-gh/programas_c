@@ -21,7 +21,7 @@ typedef TNo* TLista;
 //declaração de protótipos
 int inserir (TLista *L, int numero);
 int remover (TLista *L, int numero);
-int alterar (TLista L, int velho, int novo);
+int alterar (TLista *L, int velho, int novo);
 TLista pesquisar (TLista L, int numero);
 void exibir (TLista L);
 
@@ -181,9 +181,9 @@ unsigned int remover (TLista *L, int numero){
 					
 	return cont_ui;}
 
-int alterar (TLista L, int velho, int novo)
+int alterar (TLista *L, int velho, int novo)
 {
-	TLista aux = L;
+	TLista aux = &L;
 	int cont = 0;
 	
 	while (aux)  //while (aux != NULL)

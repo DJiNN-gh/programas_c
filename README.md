@@ -9,7 +9,7 @@ A produção deu-se início com as aulas de Fundamentos de Algoritmos da Computa
 Estão inclusos nesse repositório exercícios propostos resolvidos, exploração das ferramentas da linguagem C, projetos pessoais e análises de códigos de outros alunos da instituição.
 
 ### A quem destina-se?
-O público-alvo desse conteúdo é qualquer pessoa que deseja conhecer ou consultar informações sobre a linguagem C, à partir de qualquer nível de familiaridade com a linguagem.
+O público-alvo desse conteúdo é qualquer pessoa que deseja conhecer ou consultar informações sobre a linguagem C, a partir de qualquer nível de familiaridade com a linguagem.
 
 ### Quero contribuir. Como faço?
 São aceitas sugestões de alteração, complementação e suplementação do conteúdo. Através de um pull request ou da abertura de um issue você poderá contribuir para a melhoria do conteúdo, e será dado devido crédito à sua contribuição.
@@ -27,4 +27,4 @@ Todo o seu conteúdo é livre para visualização e cópia, ficando à discriç�
 
 ##### projetos - Projetos pessoais e desenvolvimento de programas.
 
-##### analises - Análises feitas à partir de programas desenvolvidos por outros alunos da instituição. Apenas comentários são feitos no código.
+##### analises - Análises feitas a partir de programas desenvolvidos por outros alunos da instituição. Apenas comentários são feitos no código.

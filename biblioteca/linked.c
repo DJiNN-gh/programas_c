@@ -4,17 +4,19 @@
 #define TRUE 1
 #define FALSE 0
 
-// Exemplificando uma struct utilizada para guardar informações sobre álbuns de música
-typedef struct album{	// Primeira declaração feita para contornar chamada do ponteiro
-	char title[40];	// Chave que guarda o nome do álbum
-	char artist[40];// Chave que guarda o nome do artista
-	char genre[40]; // Chave que guarda o gênero do álbum
-	int date;	// Chave que guarda o ano de lançamento do álbum
-	no *next;	// Ponteiro que aponta para o próximo elemento da lista
-	}tAlbum;	// Nome da estrutura/lista
+// Exemplificando uma estrutura utilizada para guardar informações sobre álbuns de música
+// Cada node (caixa) guarda o tanto de informações definidas pelos campos presentes na estrutura
+typedef struct node{	// Primeira declaração feita para contornar chamada do ponteiro
+	char title[40];		// Chave que guarda o nome do álbum
+	char artist[40];	// Chave que guarda o nome do artista
+	char genre[40]; 	// Chave que guarda o gênero do álbum
+	int date;		// Chave que guarda o ano de lançamento do álbum
+	struct node *next;	// Ponteiro que aponta para o próximo elemento da lista
+} tAlbum;			// Nome da estrutura/lista
 
 // Outra maneira de definir o ponteiro que "linka" a lista
-typedef tAlbum *tLista;
+// Essa seria a "cabeça" (ponteiro que aponta para o primeiro elemento) da lista
+typedef tAlbum *tHead;
 
 int main (void){
 
@@ -22,11 +24,13 @@ int main (void){
 	// tLista l=NULL;
 	struct album *l=NULL;
 
-return 0;}
+return 0;
+}
 
-void exibidor (tLista l){
+// Função que exibe os elementos da lista encadeada, recebendo a cabeça da lista
+void exibidor (tHead H){
 
-	tLista aux=l;
+	tHead aux=H;
 
 	while (aux != NULL){
 
