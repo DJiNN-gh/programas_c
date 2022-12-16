@@ -108,7 +108,7 @@
  *		|3|4|5|6|7|
  *		|4|5|6|7|8|
  * 		
- *	acessa esse elemento, ou seja o primeiro elemento do primeiro vetor;
+ *	acessa esse elemento, ou seja, o primeiro elemento do primeiro vetor;
  *
  *
  * 	enquanto,
@@ -123,7 +123,7 @@
  *		|3|4|5|6|7|
  *		|4|5|6|7|8|
  * 		
- *	acessa esse elemento, ou seja o primeiro elemento do segundo vetor.
+ *	acessa esse elemento, ou seja, o primeiro elemento do segundo vetor.
  *
  * Matrizes também podem ser entendidas como ponteiros que apontam para ponteiros, dada
  * a natureza dos vetores.
@@ -146,7 +146,7 @@
  * elemento e **matrix_c referencia o primeiro vetor.
  *
  * Cada operador * pode ser entendido como um índice e o acesso de memória pode ser 
- * realizado utilizando o operador * e então manipulando-o
+ * realizado utilizando o operador * e então manipulando-o.
  * 	
  * 	**matrix_c;
  * 		// Acesso à primeira coluna, primeira linha
