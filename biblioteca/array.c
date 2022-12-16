@@ -1,9 +1,5 @@
 #include <stdio.h>
 
-#define TAM1 100
-#define TAM2 50
-#define TAM3 23
-
 /* 
  * Vetores são alocações estáticas de memória, reservando um espaço contínuo na memória principal.
  * Vetores possuem a propriedade de reservarem apenas espaços do mesmo tipo/tamanho para toda a sua alocação.
@@ -99,14 +95,13 @@
  * 	Onde,
  *
  * 	matrix[0][0]
- *
  *	       |
  *	       v
  *	   -> |0|1|2|3|4|
- *            |1|2|3|4|5|
+ *	      |1|2|3|4|5|
  *	      |2|3|4|5|6|
  *	      |3|4|5|6|7|
- *	      |4|5|6|7|8|
+ *            |4|5|6|7|8|
  * 		
  *	acessa esse elemento, ou seja, o primeiro elemento do primeiro vetor;
  *
@@ -114,12 +109,11 @@
  * 	enquanto,
  *
  * 	matrix[1][0]
- *
  *	       |
  *	       v
  *	      |0|1|2|3|4|
  *	   -> |1|2|3|4|5|
- *	      |2|3|4|5|6|
+ *            |2|3|4|5|6|
  *	      |3|4|5|6|7|
  *	      |4|5|6|7|8|
  * 		
@@ -168,8 +162,8 @@ int main (void){
 
 	// Declaração de variáveis
 	
-	char array_c[3];			// Vetor do tipo char
-	int array_i[3];				// Vetor do tipo int
+	char array_c[3];		// Vetor do tipo char
+	int array_i[3];			// Vetor do tipo int
 	char matrix_c[3][5]={66};		// Matriz do tipo char
 	int matrix_i[10][5]={0};		// Matriz do tipo int
 	unsigned int i, j, k;
