@@ -7,7 +7,8 @@
  * 	Declaração de um vetor de caracteres de oito posições
  *
  * 	char array_c[8];
- *		// Na declaração, é informado o tamanho do vetor em seu índice.	
+ *		
+ *		Na declaração, é informado o tamanho do vetor em seu índice.	
  *
  * 	|C|O|N|T|E|U|D|O|
  * 	 0 1 2 3 4 5 6 7
@@ -19,16 +20,17 @@
  * 	2 = terceira posição;
  * 	3 = quarta posição;
  * 	...
- * 	n = enésima+1 posição;
+ * 	n = enésima+1 posição.
  *
- * 	Chamada do vetor, posição a posição
+ * 	Chamada do vetor, posição a posição:
  *
  * 	array_c[0];
  * 	array_c[1];
  * 	array_c[2];
  * 	...
  * 	array_c[7];
- * 		// Na chamada, é informada a posição do elemento que deseja ser 
+ * 		
+ * 		Na chamada, é informada a posição do elemento que deseja ser 
  * 		encontrado/manipulado.
  *
  * 	Por se tratar de memória, o índice [0] corresponde ao primeiro endereço de 
