@@ -1,7 +1,7 @@
 # programas_c
 Exercícios, análises e estudo sobre a linguagem C
 
-### O que é esse repositório?
+### O que é este repositório?
 Este repositório visa acumular, organizar e divulgar conhecimento sobre a linguagem de programação C.
 A produção deu-se início com as aulas de Fundamentos de Algoritmos da Computação, ministradas pelo professor Mestre Leonardo Vianna na instituição FAETERJ-Rio.
 
