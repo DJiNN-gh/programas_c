@@ -164,12 +164,13 @@ int main (void){
 
 	// Declaração de variáveis
 	
-	char array_c[3];               // Vetor do tipo char
-	int array_i[3];                // Vetor do tipo int
-	char matrix_c[3][5]={66};      // Matriz do tipo char
-	int matrix_i[10][5]={0};       // Matriz do tipo int
-        unsigned int i, j, k;
-        char tensor_c [10][10][10];
+	char array_c[3];                // Vetor do tipo char
+	int array_i[3];                 // Vetor do tipo int
+	char matrix_c[3][5]={66};       // Matriz do tipo char
+	int matrix_i[10][5]={0};        // Matriz do tipo int 
+        char tensor_c [10][10][10];     // Tensor de terceiro grau do tipo char
+        int tensor_i [2][4][8];         // Tensor de terceiro grau do tipo int
+        unsigned int i, j, k, l;
 
 	// Testando um vetor de caracteres
 	printf("O tamanho do vetor de char: %zu\n", sizeof array_c);
@@ -213,7 +214,6 @@ int main (void){
 	putchar('\n');
 
 	// Percorrendo a matriz de caracteres
-
 	for (i=0, k=0;i < (sizeof matrix_c / sizeof *matrix_c);i++){
 	// O primeiro loop percorre os elementos das linhas
 
@@ -236,11 +236,10 @@ int main (void){
 	putchar('\n');
 
 	// Percorrendo a matriz de inteiros
-
-	for (i=0, k=0;i < (sizeof matrix_i / sizeof *matrix_i);i++){
+	for (i=0, k=0;i < (sizeof matrix_i/sizeof *matrix_i);i++){
         // O primeiro loop percorre os elementos das linhas
 
-		for (j=0;j < (sizeof *matrix_i/ sizeof (int));j++, k++){
+		for (j=0;j < (sizeof *matrix_i/sizeof (int));j++, k++){
                 // O segundo loop percorre os elementos das colunas
         
 			printf("O elemento %u da matriz de int: %d\n", k, matrix_i[i][j]);
@@ -248,6 +247,33 @@ int main (void){
 		}
 		putchar('\n');
 	}
+        
+        putchar('\n');
+
+        //Testando um tensor de caracteres
+        printf("O tamanho do tensor de char: %zu\n", sizeof tensor_c);
+        printf("O tamanho de uma coluna do tensor de char: %zu\n", sizeof tensor_c / sizeof *tensor_c);
+        printf("O tamanho de uma linha do tensor de char: %zu\n", sizeof *tensor_c / sizeof **tensor_c);
+        printf("O tamanho de uma fileira do tensor de char: %zu\n", sizeof **tensor_c / sizeof (char));
+
+        putchar('\n');
+
+        //Percorrendo um tensor de caracteres
+        for (i=0, k=0;i < (sizeof tensor_c/sizeof *tensor_c);i++){
+        //O primeiro loop percorre os elementos das linhas
+
+            for (l=0;l < (sizeof *tensor_c/sizeof(char));l++){
+            // O segundo loop percorre os elementos das colunas
+            
+                for (j=0;j < (sizeof **tensor_c/sizeof(char));j++, k++){
+                // O terceiro loop percorre os elementos das fileiras
+                        
+                    printf("O elemento %u do tensor de char: %c\n", k, tensor_c[i][l][j]);
+                    printf("O endereco do tensor de char na posicao [%u] em memoria: %p\n", k, &tensor_c[i][l][j]);
+                }
+                putchar('\n');
+            }
+        }
 
 return 0;
 }
