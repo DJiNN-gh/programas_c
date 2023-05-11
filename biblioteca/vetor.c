@@ -107,7 +107,6 @@
  * 		
  *	acessa esse elemento, ou seja, o primeiro elemento do primeiro vetor;
  *
- *
  * 	enquanto,
  *
  * 	matrix[1][0]
