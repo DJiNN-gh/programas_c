@@ -16,13 +16,13 @@
 
 		inteiro de 4 bytes com sinal
 
-		menor valor				zero			maior valor
-		-2,147,483,648...		0...			2,147,483,647
+		menor valor					zero				maior valor
+		-2,147,483,648...			0...				2,147,483,647
 
 		inteiro de 4 bytes sem sinal
 
-		menor valor (zero)		maior valor
-		0...					4,294,967,295
+		menor valor (zero)			maior valor
+		0...						4,294,967,295
 
 	Nota-se que os valores representados mudam, porém o número de representações permanece igual, sendo a diferença a presença da
 	representação de valores negativos para o inteiro sem sinal.

@@ -41,10 +41,14 @@ int main (void){
 	for (i=0;i<10;i++){	
 
 		printf("O resultado de d: %d\n", d);
-		d=d >> 1;}	// Essa operação realiza a divisão do valor de d, 1024, por 2 elevado a 1.
+		d=d >> 1;	// Essa operação realiza a divisão do valor de d, 1024, por 2 elevado a 1.
+		}
 	
 	for (i=0;i<10;i++){
 
 		d=d << 1;	// Essa operação realiza a multiplicação do valor de d, 2, por 2 elevado a 1.
-		printf("O resultado de d: %d\n", d);}
-return 0;}
+		printf("O resultado de d: %d\n", d);
+		}
+
+return 0;
+}
