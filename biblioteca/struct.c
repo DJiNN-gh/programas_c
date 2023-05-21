@@ -40,13 +40,16 @@ struct aniversario{				// Forma 1 de declarar uma struct
 	char nome[VAL2];			// Declaração inicial mais simples
 	unsigned char dia;
 	unsigned char mes;
-	short ano;};
+	short ano;
+};
+
 // Ou
 typedef struct{					// Forma 2 de declarar uma struct
 	char nome[VAL2];			// Evita o uso de declarações repetidas da tag struct
 	unsigned char dia;
 	unsigned char mes;
-	short ano;} tAniversario2;
+	short ano;
+} tAniversario2;
 
 
 void calculador (tAluno v[], unsigned int tam_ui);
@@ -74,7 +77,8 @@ int main (void){
 	for(i=2019010001, j=0;j<VAL1;i++, j++){
 
 		a.inscricao[j]=i;
-		printf("%u\t", a.inscricao[j]);}
+		printf("%u\t", a.inscricao[j]);
+	}
 
 	puts("\n");
 
@@ -109,10 +113,12 @@ int main (void){
 	for (i=0;i<3;i++){
 
 		printf("Nome do aniversariante: %s\nDia do nascimento: %d\nMes do nascimento: %d\nAno do nascimento: %d\n", dados[i].nome, dados[i].dia, dados[i].mes, dados[i].ano);
-		puts("\0");}
+		puts("\0");
+	}
 
 
-return 0;}
+return 0;
+}
 
 // Função que determina se um aluno está aprovado, em avaliação final ou reprovado
 // Será utilizado o enum para determinar a flag
@@ -132,7 +138,9 @@ void calculador (tAluno *a, unsigned int tam_ui){
 			
 			a[i].sit=REPROVADO;
 		else
-			a[i].sit=AVF;}}
+			a[i].sit=AVF;
+	}
+}
 
 // Função que utiliza uma struct para organizar informações de uma pessoa
 // A struct serve como um conjunto de propriedades para o objeto (variável) utilizado
@@ -155,4 +163,5 @@ void organizador (tAniversario2 *list){
 	
 		printf("Deseja inserir mais um registro?(S/N) \n");
 		scanf("%c", &opcao_c);
-		opcao_c=toupper(opcao_c);}
+		opcao_c=toupper(opcao_c);
+}
